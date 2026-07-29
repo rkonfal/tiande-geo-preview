@@ -3,148 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GEO Preview v2 – Vlna 1 · Top 20 SKU · Království TianDe</title>
+<title>GEO v2 Preview – Vlna 1 (Top 20 SKU)</title>
 <style>
-:root{--bg:#f4f4f6;--card:#fff;--border:#ddd;--before-bg:#fff8f8;--after-bg:#f4fdf6;--before-acc:#c0392b;--after-acc:#27ae60;--hdr:#16213e;--text:#222;--muted:#666}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text)}
-/* HEADER */
-.hdr{background:var(--hdr);color:#fff;padding:18px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.4)}
-.hdr h1{font-size:17px;font-weight:800}.hdr .sub{font-size:11px;opacity:.65;margin-top:2px}
-.badge{background:#4ade80;color:#000;font-weight:900;font-size:22px;padding:4px 14px;border-radius:20px}
-/* NAV */
-.nav{background:#fff;border-bottom:1px solid var(--border);padding:8px 28px;display:flex;flex-wrap:wrap;gap:6px;position:sticky;top:64px;z-index:99}
-.ni{text-decoration:none;color:var(--muted);font-size:11px;padding:2px 7px;border:1px solid var(--border);border-radius:10px;transition:.15s}
-.ni:hover{background:var(--hdr);color:#fff;border-color:var(--hdr)}
-/* MAIN */
-.main{max-width:1500px;margin:0 auto;padding:20px 28px}
-/* CARD */
-.card{background:var(--card);border:1px solid var(--border);border-radius:10px;margin-bottom:28px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06)}
-.card-head{padding:14px 22px 10px;background:#f8f9fa;border-bottom:1px solid var(--border)}
-.meta-row{display:flex;align-items:center;gap:10px;margin-bottom:5px;flex-wrap:wrap}
-.rank{background:var(--hdr);color:#fff;font-weight:800;font-size:12px;padding:2px 9px;border-radius:20px}
-.sku{font-size:11px;color:var(--muted);background:#eee;padding:2px 7px;border-radius:4px}
-.sales{font-size:12px;color:var(--after-acc);font-weight:600}
-.ext{font-size:11px;color:#3498db;text-decoration:none}
-.prod-title{font-size:15px;font-weight:700}
-/* COLS */
-.cols{display:grid;grid-template-columns:1fr 28px 1fr}
-.arrow{display:flex;align-items:center;justify-content:center;background:var(--border);font-size:18px;color:var(--muted)}
-.col{padding:18px 20px}
-.col-before{background:var(--before-bg)}
-.col-after{background:var(--after-bg)}
-.col-label{font-size:11px;font-weight:800;letter-spacing:.5px;padding:3px 10px;border-radius:10px;display:inline-block;margin-bottom:12px}
-.before-label{background:var(--before-acc);color:#fff}
-.after-label{background:var(--after-acc);color:#fff}
-.col-body{font-size:13px;line-height:1.65}
-/* After body styles */
-.col-body h2{font-size:15px;color:#1a5c2e;margin:14px 0 7px}
-.col-body h3{font-size:14px;color:#1a5c2e;margin:12px 0 6px}
-.col-body h4{font-size:13px;color:#555;margin:10px 0 5px}
-.col-body p{margin-bottom:7px}
-.col-body ul,.col-body ol{margin:7px 0 7px 18px}
-.col-body li{margin-bottom:4px}
-.col-body table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12px}
-.col-body th{background:#1a5c2e;color:#fff;padding:5px 8px;text-align:left}
-.col-body td{padding:4px 8px;border-bottom:1px solid #ddd}
-.col-body details{margin:6px 0;border:1px solid #c8e6c9;border-radius:6px}
-.col-body summary{padding:7px 10px;cursor:pointer;font-weight:600;color:#1a5c2e;background:#f1f8e9;border-radius:6px}
-.col-body details p{padding:8px 10px;margin:0}
-.col-body a{color:#27ae60;font-weight:600}
-.col-body script{display:none}
-/* GEO tags */
-.geo-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;padding-top:12px;border-top:1px solid #c8e6c9}
-.geo-tags span{font-size:11px;font-weight:700;color:var(--after-acc);background:rgba(39,174,96,.1);padding:2px 8px;border-radius:10px}
-@media(max-width:860px){.cols{grid-template-columns:1fr}.arrow{display:none}}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f5f5f7;color:#1d1d1f;font-size:13px;line-height:1.55}
+.site-header{background:#1a1a2e;color:#fff;padding:16px 28px;position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.site-header h1{font-size:16px;font-weight:700}
+.site-header .sub{font-size:11px;opacity:.65;margin-top:2px}
+.badge-v2{background:#4ade80;color:#000;font-size:10px;font-weight:800;padding:2px 8px;border-radius:10px;margin-left:8px}
+.nav-bar{background:#fff;border-bottom:1px solid #e0e0e0;padding:8px 28px;display:flex;gap:6px;flex-wrap:wrap;position:sticky;top:58px;z-index:99}
+.nav-item{text-decoration:none;color:#555;font-size:11px;padding:3px 7px;border-radius:10px;border:1px solid #ddd;white-space:nowrap;transition:all .12s}
+.nav-item:hover{background:#1a1a2e;color:#fff;border-color:#1a1a2e}
+.main{max-width:1440px;margin:0 auto;padding:20px 28px}
+.product-card{background:#fff;border:1px solid #e0e0e0;border-radius:10px;margin-bottom:24px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.product-header{padding:12px 20px 10px;background:#f8f9fa;border-bottom:1px solid #e8e8e8}
+.product-meta{display:flex;align-items:center;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.rank{background:#1a1a2e;color:#fff;font-weight:800;font-size:12px;padding:2px 8px;border-radius:14px}
+.sku{font-family:monospace;font-size:11px;color:#666;background:#eee;padding:2px 6px;border-radius:3px}
+.sales{font-size:11px;color:#27ae60;font-weight:600}
+.shop-link{font-size:11px;color:#3498db;text-decoration:none}
+.product-title{font-size:15px;font-weight:700}
+.comparison{display:grid;grid-template-columns:1fr 28px 1fr}
+.col{padding:16px 20px;overflow:auto}
+.before-col{background:#fdf5f5}
+.after-col{background:#f5fdf5}
+.arrow{display:flex;align-items:center;justify-content:center;background:#e8e8e8;color:#888;font-size:18px}
+.col-header{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.label-badge{font-size:10px;font-weight:800;padding:3px 8px;border-radius:10px;letter-spacing:.3px}
+.before-badge{background:#c0392b;color:#fff}
+.after-badge{background:#27ae60;color:#fff}
+.col-sub{font-size:11px;color:#888}
+.geo-content h2{font-size:14px;font-weight:700;margin:14px 0 6px;color:#1a5c2e}
+.geo-content h3{font-size:13px;font-weight:600;margin:12px 0 5px;color:#2c5f2e}
+.geo-content p{margin-bottom:6px;font-size:13px}
+.geo-content ul{margin:6px 0 6px 18px}
+.geo-content li{margin-bottom:3px}
+.geo-content table{border-collapse:collapse;width:100%;margin:8px 0;font-size:12px}
+.geo-content th{background:#e8f5e9;padding:5px 8px;text-align:left;border:1px solid #c8e6c9;font-weight:600}
+.geo-content td{padding:4px 8px;border:1px solid #e0e0e0}
+.geo-content details{margin:4px 0;border:1px solid #c8e6c9;border-radius:6px;overflow:hidden}
+.geo-content summary{padding:6px 10px;cursor:pointer;background:#f1f8f1;font-weight:600;font-size:12px;list-style:none}
+.geo-content details[open] summary{background:#e8f5e9}
+.geo-content details p{padding:6px 10px;margin:0;font-size:12px;background:#fff}
+.geo-content ol{margin:6px 0 6px 18px}
+.geo-content script{display:none}
+@media(max-width:900px){.comparison{grid-template-columns:1fr}.arrow{display:none}}
 </style>
 </head>
 <body>
-<header class="hdr">
-  <div><h1>GEO Preview v2 – Vlna 1</h1><div class="sub">Top 20 SKU · Ověřená fakta · JSON-LD · FAQ bloky · Království TianDe</div></div>
-  <div><div class="badge">10/10</div><div style="font-size:10px;opacity:.6;text-align:center;margin-top:3px">target</div></div>
-</header>
-<nav class="nav"><a href="#p1" class="ni">#1 44402-2</a>
-<a href="#p2" class="ni">#2 41328</a>
-<a href="#p3" class="ni">#3 64404-2</a>
-<a href="#p4" class="ni">#4 30118</a>
-<a href="#p5" class="ni">#5 61912</a>
-<a href="#p6" class="ni">#6 61911</a>
-<a href="#p7" class="ni">#7 63601</a>
-<a href="#p8" class="ni">#8 61914</a>
-<a href="#p9" class="ni">#9 61902</a>
-<a href="#p10" class="ni">#10 30117</a>
-<a href="#p11" class="ni">#11 61915</a>
-<a href="#p12" class="ni">#12 135460</a>
-<a href="#p13" class="ni">#13 30111</a>
-<a href="#p14" class="ni">#14 41105</a>
-<a href="#p15" class="ni">#15 61901</a>
-<a href="#p16" class="ni">#16 67007</a>
-<a href="#p17" class="ni">#17 61913</a>
-<a href="#p18" class="ni">#18 60145</a>
-<a href="#p19" class="ni">#19 61921</a>
-<a href="#p20" class="ni">#20 61923</a>
-</nav>
-<main class="main">
-<div class="card" id="p1">
-  <div class="card-head">
-    <div class="meta-row">
-      <span class="rank">#1</span>
-      <code class="sku">44402-2</code>
-      <span class="sales">📦 5,434 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/fytogel-slaviton_z8039/" target="_blank" class="ext">↗ e-shop</a>
-    </div>
-    <div class="prod-title">Fytogel Slaviton</div>
+<header class="site-header">
+  <div>
+    <h1>GEO Preview — Vlna 1 <span class="badge-v2">v2</span></h1>
+    <div class="sub">Top 20 SKU · ověřená fakta · FAQ + JSON-LD · srovnávací tabulky</div>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Fytogel Slaviton</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 44402-2</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Slaviton je chladivý gel na těžké, unavené a oteklé nohy po stání, chůzi, cestování i sportu. Hodí se hlavně tehdy, když chcete rychlé osvěžení bez hřejivého nebo masážního efektu.</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">O produktu</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Slaviton doporučujeme hlavně tehdy, když někdo řeší těžké, unavené nebo oteklé nohy po dlouhém dni a chce rychlý chladivý gel s pocitem lehkosti. Nejlépe funguje jako jednoduchá večerní nebo po-zátěžová péče, když nechcete hřejivý gel ani náplast.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Po dlouhém stání v práci nebo po dni na nohách.</li>
-<li style="margin-bottom:3px">Po delší chůzi, cestování nebo návratu domů ve vedru.</li>
-<li style="margin-bottom:3px">Po sportu, pokud chcete hlavně zchladit a osvěžit nohy.</li>
-<li style="margin-bottom:3px">Ve večerní rutině, kdy je cílem vrátit nohám pocit lehkosti.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">Slaviton: chladivý gel na těžké a unavené nohy.</li>
-<li style="margin-bottom:3px">Orthophyt: spíš masážní gel na namáhané svaly a klouby.</li>
-<li style="margin-bottom:3px">Wutong: lokální náplast bez mazání, když dává větší smysl nalepovací řešení.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když hledáte hřejivý efekt nebo silnější masážní práci s namoženým místem.</li>
-<li style="margin-bottom:3px">Když řešíte spíš záda, bedra nebo konkrétní partii než pocit těžkých nohou.</li>
-<li style="margin-bottom:3px">Když chcete produkt bez roztírání a preferujete náplast.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Naneste menší množství na chodidla, nárty a lýtka po návratu domů nebo po sprše.</li>
-<li style="margin-bottom:3px">Krátce vmasírujte směrem nahoru, aby se gel rychle vstřebal.</li>
-<li style="margin-bottom:3px">Použijte znovu večer nebo ráno podle potřeby, hlavně ve dnech s vyšší zátěží.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Co pomáhá na těžké nohy po dlouhém stání? Slaviton dává smysl jako chladivý gel s rychlým pocitem lehkosti.</li>
-<li style="margin-bottom:3px">Je lepší Slaviton nebo Orthophyt? Slaviton na těžké nohy a osvěžení, Orthophyt spíš na masáž namáhaných partií.</li>
-<li style="margin-bottom:3px">Je Slaviton vhodný i po sportu? Ano, hlavně když chcete nohy zklidnit a osvěžit bez hřejivého efektu.</li>
-<br>
-<p style="margin:3px 0;font-size:13px">Objem: 125 ml | Kusy: 1 ks | Produktová řada: Altai Sacral</p>
-<br></div>
+  <div style="text-align:right;font-size:12px;opacity:.8">20 produktů</div>
+</header>
+<nav class="nav-bar"><a href="#p1" class="nav-item">#1 44402-2</a><a href="#p2" class="nav-item">#2 41328</a><a href="#p3" class="nav-item">#3 64404-2</a><a href="#p4" class="nav-item">#4 30118</a><a href="#p5" class="nav-item">#5 61912</a><a href="#p6" class="nav-item">#6 61911</a><a href="#p7" class="nav-item">#7 63601</a><a href="#p8" class="nav-item">#8 61914</a><a href="#p9" class="nav-item">#9 61902</a><a href="#p10" class="nav-item">#10 30117</a><a href="#p11" class="nav-item">#11 61915</a><a href="#p12" class="nav-item">#12 135460</a><a href="#p13" class="nav-item">#13 30111</a><a href="#p14" class="nav-item">#14 41105</a><a href="#p15" class="nav-item">#15 61901</a><a href="#p16" class="nav-item">#16 67007</a><a href="#p17" class="nav-item">#17 61913</a><a href="#p18" class="nav-item">#18 60145</a><a href="#p19" class="nav-item">#19 61921</a><a href="#p20" class="nav-item">#20 61923</a></nav>
+<main class="main"><div class="product-card" id="p1">
+  <div class="product-header">
+    <div class="product-meta">
+      <span class="rank">#1</span>
+      <span class="sku">44402-2</span>
+      <span class="sales">📦 5,434 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/fytogel-slaviton_z8039/" target="_blank" class="shop-link">🔗 e-shop</a>
+    </div>
+    <h2 class="product-title">Fytogel Slaviton</h2>
+  </div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Fytogel Slaviton</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 44402-2</p>
+<p style="margin:3px 0;font-size:12px">Slaviton je chladivý gel na těžké, unavené a oteklé nohy po stání, chůzi, cestování i sportu. Hodí se hlavně tehdy, když chcete rychlé osvěžení bez hřejivého nebo masážního efektu.</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">O produktu</h3>
+<p style="margin:3px 0;font-size:12px">Slaviton doporučujeme hlavně tehdy, když někdo řeší těžké, unavené nebo oteklé nohy po dlouhém dni a chce rychlý chladivý gel s pocitem lehkosti. Nejlépe funguje jako jednoduchá večerní nebo po-zátěžová péče, když nechcete hřejivý gel ani náplast.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Po dlouhém stání v práci nebo po dni na nohách.</li>
+<li style="margin-bottom:2px">Po delší chůzi, cestování nebo návratu domů ve vedru.</li>
+<li style="margin-bottom:2px">Po sportu, pokud chcete hlavně zchladit a osvěžit nohy.</li>
+<li style="margin-bottom:2px">Ve večerní rutině, kdy je cílem vrátit nohám pocit lehkosti.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Slaviton: chladivý gel na těžké a unavené nohy.</li>
+<li style="margin-bottom:2px">Orthophyt: spíš masážní gel na namáhané svaly a klouby.</li>
+<li style="margin-bottom:2px">Wutong: lokální náplast bez mazání, když dává větší smysl nalepovací řešení.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když hledáte hřejivý efekt nebo silnější masážní práci s namoženým místem.</li>
+<li style="margin-bottom:2px">Když řešíte spíš záda, bedra nebo konkrétní partii než pocit těžkých nohou.</li>
+<li style="margin-bottom:2px">Když chcete produkt bez roztírání a preferujete náplast.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Naneste menší množství na chodidla, nárty a lýtka po návratu domů nebo po sprše.</li>
+<li style="margin-bottom:2px">Krátce vmasírujte směrem nahoru, aby se gel rychle vstřebal.</li>
+<li style="margin-bottom:2px">Použijte znovu večer nebo ráno podle potřeby, hlavně ve dnech s vyšší zátěží.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Co pomáhá na těžké nohy po dlouhém stání? Slaviton dává smysl jako chladivý gel s rychlým pocitem lehkosti.</li>
+<li style="margin-bottom:2px">Je lepší Slaviton nebo Orthophyt? Slaviton na těžké nohy a osvěžení, Orthophyt spíš na masáž namáhaných partií.</li>
+<li style="margin-bottom:2px">Je Slaviton vhodný i po sportu? Ano, hlavně když chcete nohy zklidnit a osvěžit bez hřejivého efektu.</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">Objem: 125 ml | Kusy: 1 ks | Produktová řada: Altai Sacral</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -280,75 +249,63 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p2">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p2">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#2</span>
-      <code class="sku">41328</code>
-      <span class="sales">📦 5,158 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/levandulova-naplast-na-nohy_z3162/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">41328</span>
+      <span class="sales">📦 5,158 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/levandulova-naplast-na-nohy_z3162/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Levandulová náplast na nohy</div>
+    <h2 class="product-title">Levandulová náplast na nohy</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Levandulová náplast na nohy</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 41328</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Levandulová náplast na nohy doporučujeme jako večerní náplast na nohy po náročném dni, když chcete jednoduchý rituál bez mazání a rychle poznat, kdy zvolit náplast místo krému nebo koupele.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (134x hodnoceno)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Kdy doporučit Levandulová náplast na nohy jako večerní péči o nohy</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Levandulová náplast na nohy dává největší smysl večer po náročném dni, když chcete jednoduchý rituál na nohy bez mazání a potřebujete si rychle ujasnit, kdy zvolit náplast a kdy už raději krém nebo koupel.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Večer po náročném dni, když chcete jednoduchý rituál bez mazání.</li>
-<li style="margin-bottom:3px">Když hledáte náplast na nohy na noc a nechcete krém nebo koupel.</li>
-<li style="margin-bottom:3px">Když potřebujete rychle vybrat mezi klasickou a levandulovou variantou.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">Levandulová náplast na nohy: náplast na chodidla pro večerní použití.</li>
-<li style="margin-bottom:3px">Náplast na nohy: jiná podobná varianta na nohy, která může sedět jinému typu večerního rituálu.</li>
-<li style="margin-bottom:3px">Solná koupel na nohy Levandule: spíš koupelová nebo jiná forma péče než nalepovací řešení.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když dává větší smysl Náplast na nohy.</li>
-<li style="margin-bottom:3px">Když je vhodnější Solná koupel na nohy Levandule nebo krém na nohy.</li>
-<li style="margin-bottom:3px">Když zákazník nechce nalepovací variantu a raději volí jiný typ domácí péče.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Začněte večerní situací použití a jednoduchostí použití bez mazání.</li>
-<li style="margin-bottom:3px">Doplňte jasný most na krém a koupel, aby bylo rozhodování snazší.</li>
-<li style="margin-bottom:3px">Nejdřív řešte situaci použití, až potom doplňující benefity.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je Levandulová náplast na nohy nejlepší? Na večerní péči o nohy po náročném dni.</li>
-<li style="margin-bottom:3px">Kdy zvolit Levandulová náplast na nohy a kdy Náplast na nohy? Podle toho, jaký typ náplasti a večerního rituálu hledáte.</li>
-<li style="margin-bottom:3px">Kdy je lepší Solná koupel na nohy Levandule? Když nechcete náplast, ale koupelový rituál.</li>
-<br>
-<p style="margin:3px 0;font-size:13px">Kusy: 2 ks | Produktová řada: Master Herb</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Levandulová náplast na nohy</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 41328</p>
+<p style="margin:3px 0;font-size:12px">Levandulová náplast na nohy doporučujeme jako večerní náplast na nohy po náročném dni, když chcete jednoduchý rituál bez mazání a rychle poznat, kdy zvolit náplast místo krému nebo koupele.</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (134x hodnoceno)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Kdy doporučit Levandulová náplast na nohy jako večerní péči o nohy</h3>
+<p style="margin:3px 0;font-size:12px">Levandulová náplast na nohy dává největší smysl večer po náročném dni, když chcete jednoduchý rituál na nohy bez mazání a potřebujete si rychle ujasnit, kdy zvolit náplast a kdy už raději krém nebo koupel.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Večer po náročném dni, když chcete jednoduchý rituál bez mazání.</li>
+<li style="margin-bottom:2px">Když hledáte náplast na nohy na noc a nechcete krém nebo koupel.</li>
+<li style="margin-bottom:2px">Když potřebujete rychle vybrat mezi klasickou a levandulovou variantou.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Levandulová náplast na nohy: náplast na chodidla pro večerní použití.</li>
+<li style="margin-bottom:2px">Náplast na nohy: jiná podobná varianta na nohy, která může sedět jinému typu večerního rituálu.</li>
+<li style="margin-bottom:2px">Solná koupel na nohy Levandule: spíš koupelová nebo jiná forma péče než nalepovací řešení.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když dává větší smysl Náplast na nohy.</li>
+<li style="margin-bottom:2px">Když je vhodnější Solná koupel na nohy Levandule nebo krém na nohy.</li>
+<li style="margin-bottom:2px">Když zákazník nechce nalepovací variantu a raději volí jiný typ domácí péče.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Začněte večerní situací použití a jednoduchostí použití bez mazání.</li>
+<li style="margin-bottom:2px">Doplňte jasný most na krém a koupel, aby bylo rozhodování snazší.</li>
+<li style="margin-bottom:2px">Nejdřív řešte situaci použití, až potom doplňující benefity.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je Levandulová náplast na nohy nejlepší? Na večerní péči o nohy po náročném dni.</li>
+<li style="margin-bottom:2px">Kdy zvolit Levandulová náplast na nohy a kdy Náplast na nohy? Podle toho, jaký typ náplasti a večerního rituálu hledáte.</li>
+<li style="margin-bottom:2px">Kdy je lepší Solná koupel na nohy Levandule? Když nechcete náplast, ale koupelový rituál.</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">Kusy: 2 ks | Produktová řada: Master Herb</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -484,75 +441,63 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p3">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p3">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#3</span>
-      <code class="sku">64404-2</code>
-      <span class="sales">📦 3,134 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/jemny-intimni-gel_z7619/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">64404-2</span>
+      <span class="sales">📦 3,134 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/jemny-intimni-gel_z7619/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Jemný intimní gel</div>
+    <h2 class="product-title">Jemný intimní gel</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Jemný intimní gel</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 64404-2</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Jemný intimní gel doporučujeme ženám, které hledají šetrný intimní gel pro každodenní hygienu, svěžest a komfort i při citlivějším intimním prostředí. Kyselina mléčná a bylinné extrakty čistí bez pocitu vysušení.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (5x hodnoceno)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Intimní gel pro každodenní hygienu: kdy doporučit Jemný intimní gel</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Jemný intimní gel doporučujeme hlavně tehdy, když hledáte šetrný produkt pro každodenní hygienu a nechcete agresivní nebo vysušující řešení. Nejlépe funguje jako pravidelná rutina pro citlivější intimní prostředí, kdy je důležitá jemnost, svěžest a komfort.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Při každodenní intimní hygieně, kdy je prioritou jemnost a šetrnost.</li>
-<li style="margin-bottom:3px">Když běžné mycí produkty působí příliš agresivně nebo vysušují.</li>
-<li style="margin-bottom:3px">Když chcete produkt, který dává smysl pro pravidelnou domácí rutinu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Pro koho je vhodný</h5>
-<br>
-<li style="margin-bottom:3px">Pro ženy, které chtějí jemný intimní gel na každý den.</li>
-<li style="margin-bottom:3px">Pro uživatelky s citlivější pokožkou nebo citlivějším intimním prostředím.</li>
-<li style="margin-bottom:3px">Pro ženy, které chtějí šetrnou alternativu k běžným mycím produktům.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když někdo hledá jiný typ produktu než jemnou každodenní hygienu.</li>
-<li style="margin-bottom:3px">Když je prioritou úplně jiný formát nebo řešení mimo běžnou rutinu.</li>
-<li style="margin-bottom:3px">Když zákaznice nehledá šetrný produkt, ale spíš silně parfémované nebo agresivnější mytí.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Naneste malé množství při sprchování na vlhkou pokožku intimních partií.</li>
-<li style="margin-bottom:3px">Jemně opláchněte a používejte pravidelně podle potřeby.</li>
-<li style="margin-bottom:3px">V horních blocích vždy zdůrazněte každodenní šetrnou rutinu, ne jednorázové SOS řešení.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Je vhodný pro každý den? Ano, právě pro každodenní intimní hygienu je určený.</li>
-<li style="margin-bottom:3px">Hodí se pro citlivější pokožku? Ano, už v úvodu má být jasné, že jde o šetrnou variantu.</li>
-<li style="margin-bottom:3px">Kdy už je lepší jiný typ produktu? Když nejde o běžnou jemnou každodenní hygienu.</li>
-<br>
-<p style="margin:3px 0;font-size:13px">Objem: 360 ml | Kusy: 1 ks | Produktová řada: Altai Sacral</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Jemný intimní gel</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 64404-2</p>
+<p style="margin:3px 0;font-size:12px">Jemný intimní gel doporučujeme ženám, které hledají šetrný intimní gel pro každodenní hygienu, svěžest a komfort i při citlivějším intimním prostředí. Kyselina mléčná a bylinné extrakty čistí bez pocitu vysušení.</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (5x hodnoceno)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Intimní gel pro každodenní hygienu: kdy doporučit Jemný intimní gel</h3>
+<p style="margin:3px 0;font-size:12px">Jemný intimní gel doporučujeme hlavně tehdy, když hledáte šetrný produkt pro každodenní hygienu a nechcete agresivní nebo vysušující řešení. Nejlépe funguje jako pravidelná rutina pro citlivější intimní prostředí, kdy je důležitá jemnost, svěžest a komfort.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Při každodenní intimní hygieně, kdy je prioritou jemnost a šetrnost.</li>
+<li style="margin-bottom:2px">Když běžné mycí produkty působí příliš agresivně nebo vysušují.</li>
+<li style="margin-bottom:2px">Když chcete produkt, který dává smysl pro pravidelnou domácí rutinu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Pro koho je vhodný</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Pro ženy, které chtějí jemný intimní gel na každý den.</li>
+<li style="margin-bottom:2px">Pro uživatelky s citlivější pokožkou nebo citlivějším intimním prostředím.</li>
+<li style="margin-bottom:2px">Pro ženy, které chtějí šetrnou alternativu k běžným mycím produktům.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když někdo hledá jiný typ produktu než jemnou každodenní hygienu.</li>
+<li style="margin-bottom:2px">Když je prioritou úplně jiný formát nebo řešení mimo běžnou rutinu.</li>
+<li style="margin-bottom:2px">Když zákaznice nehledá šetrný produkt, ale spíš silně parfémované nebo agresivnější mytí.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Naneste malé množství při sprchování na vlhkou pokožku intimních partií.</li>
+<li style="margin-bottom:2px">Jemně opláchněte a používejte pravidelně podle potřeby.</li>
+<li style="margin-bottom:2px">V horních blocích vždy zdůrazněte každodenní šetrnou rutinu, ne jednorázové SOS řešení.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Je vhodný pro každý den? Ano, právě pro každodenní intimní hygienu je určený.</li>
+<li style="margin-bottom:2px">Hodí se pro citlivější pokožku? Ano, už v úvodu má být jasné, že jde o šetrnou variantu.</li>
+<li style="margin-bottom:2px">Kdy už je lepší jiný typ produktu? Když nejde o běžnou jemnou každodenní hygienu.</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">Objem: 360 ml | Kusy: 1 ks | Produktová řada: Altai Sacral</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -682,54 +627,44 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p4">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p4">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#4</span>
-      <code class="sku">30118</code>
-      <span class="sales">📦 3,022 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/kosmeticka-fytonaplast-wutong_z3160/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">30118</span>
+      <span class="sales">📦 3,022 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/kosmeticka-fytonaplast-wutong_z3160/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Kosmetická fytonáplast Wutong</div>
+    <h2 class="product-title">Kosmetická fytonáplast Wutong</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Kosmetická fytonáplast Wutong</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 30118</p>
-<p style="margin:3px 0;font-size:13px">URL: https://www.kralovstvi-tiande.cz/kosmeticka-fytonaplast-wutong_z3160/</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Jak vybrat hřejivou náplast na záda a namáhané partie.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Náplast Wutong je lokální hřejivá fytonáplast určená na namáhané partie těla – záda, ramena, klouby. Slouží jako jednoduché nalepovací řešení bez nutnosti mazání, které cílí na konkrétní místo. Doporučuje se tehdy, když dává větší smysl náplast než gel nebo krém.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">fytonáplast Jian Kang: náplast na konkrétní místo bez mazání.</li>
-<li style="margin-bottom:3px">fytonáplast Wutong: dává větší smysl v trochu jiném typu lokální aplikace.</li>
-<li style="margin-bottom:3px">Masážní gel Orthophyt: hodí se spíš tehdy, když uživatel preferuje gelovou nebo masážní variantu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Pokud dává větší smysl Kosmetická fytonáplast Jian Kang.</li>
-<li style="margin-bottom:3px">Pokud hledáte chladivý nebo masážní produkt místo náplasti.</li>
-<li style="margin-bottom:3px">Pokud řešíte jiný problém než lokální péči o namáhané partie.</li>
-<br>
-<p style="margin:3px 0;font-size:13px">POZNÁMKA: Stránka při načtení vrátila pouze navigaci – popis produktu nebyl v extrahovaném obsahu dostupný. Text výše vychází z kontextu zmínek na příbuzných produktových stránkách.</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Kosmetická fytonáplast Wutong</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 30118</p>
+<p style="margin:3px 0;font-size:12px">URL: https://www.kralovstvi-tiande.cz/kosmeticka-fytonaplast-wutong_z3160/</p>
+<p style="margin:3px 0;font-size:12px">Jak vybrat hřejivou náplast na záda a namáhané partie.</p>
+<p style="margin:3px 0;font-size:12px">Náplast Wutong je lokální hřejivá fytonáplast určená na namáhané partie těla – záda, ramena, klouby. Slouží jako jednoduché nalepovací řešení bez nutnosti mazání, které cílí na konkrétní místo. Doporučuje se tehdy, když dává větší smysl náplast než gel nebo krém.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">fytonáplast Jian Kang: náplast na konkrétní místo bez mazání.</li>
+<li style="margin-bottom:2px">fytonáplast Wutong: dává větší smysl v trochu jiném typu lokální aplikace.</li>
+<li style="margin-bottom:2px">Masážní gel Orthophyt: hodí se spíš tehdy, když uživatel preferuje gelovou nebo masážní variantu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Pokud dává větší smysl Kosmetická fytonáplast Jian Kang.</li>
+<li style="margin-bottom:2px">Pokud hledáte chladivý nebo masážní produkt místo náplasti.</li>
+<li style="margin-bottom:2px">Pokud řešíte jiný problém než lokální péči o namáhané partie.</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">POZNÁMKA: Stránka při načtení vrátila pouze navigaci – popis produktu nebyl v extrahovaném obsahu dostupný. Text výše vychází z kontextu zmínek na příbuzných produktových stránkách.</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -854,86 +789,74 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p5">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p5">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#5</span>
-      <code class="sku">61912</code>
-      <span class="sales">📦 2,240 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/damske-bylinne-menstruacni-vlozky-nefritova-svezest-denni-super_z2024/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">61912</span>
+      <span class="sales">📦 2,240 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/damske-bylinne-menstruacni-vlozky-nefritova-svezest-denni-super_z2024/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Dámské bylinné menstruační vložky Nefritová svěžest – denní super</div>
+    <h2 class="product-title">Dámské bylinné menstruační vložky Nefritová svěžest – denní super</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Dámské bylinné menstruační vložky Nefritová svěžest. denní super</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 61912</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Dámské bylinné menstruační vložky Nefritová svěžest. denní super doporučujeme tehdy, když potřebujete jasně vybrat menstruační variantu spíš na den, odpovídající míru jistoty a rychle poznat, kdy už je lepší sáhnout po blízké alternativě.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (80x hodnoceno)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Vložky na silnější den: kdy doporučit denní super variantu</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Dámské bylinné menstruační vložky Nefritová svěžest. denní super doporučujeme hlavně tehdy, když zákaznice nehledá obecně jen vložku, ale potřebuje rychle poznat, jestli je tahle varianta vhodná spíš na den, jakou míru jistoty nabídne a kdy už je lepší sáhnout po blízké alternativě.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Při menstruaci, kdy potřebujete jistotu odpovídající této variantě.</li>
-<li style="margin-bottom:3px">Když je potřeba rychle odlišit denní a noční použití nebo lehčí a silnější volbu.</li>
-<li style="margin-bottom:3px">Když zákaznice vybírá podle konkrétní situace a ne jen podle názvu řady.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">menstruační vložky Nefritová svěžest. denní super: volba pro den a konkrétní úroveň ochrany.</li>
-<li style="margin-bottom:3px">menstruační vložky Nefritová svěžest. noční super: dává větší smysl v sousední denní nebo noční situaci.</li>
-<li style="margin-bottom:3px">Denní vložky s extraktem aloe Nefritová svěžest: je vhodnější pro jemnější nebo nemenstruační použití.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když dává větší smysl Dámské bylinné menstruační vložky Nefritová svěžest. noční super.</li>
-<li style="margin-bottom:3px">Když už je vhodnější jemnější nebo běžnější varianta jako Denní vložky s extraktem aloe Nefritová svěžest.</li>
-<li style="margin-bottom:3px">Když nehledáte menstruační vložku, ale lehčí denní produkt.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">V úvodu hned vysvětlete, jestli jde o denní nebo noční variantu a pro jak silný režim se hodí.</li>
-<li style="margin-bottom:3px">Srovnávejte ji přímo s nejbližší alternativou v rámci stejné řady.</li>
-<li style="margin-bottom:3px">Vyjasněte hranici mezi běžným denním nošením a menstruačním použitím.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je nejlepší? Na situace, které odpovídají dotazu vložky na silnější den.</li>
-<li style="margin-bottom:3px">Kdy zvolit denní super a kdy noční super? Podle toho, jestli řešíte den a jakou míru jistoty potřebujete.</li>
-<li style="margin-bottom:3px">Kdy už je lepší Denní vložky s extraktem aloe Nefritová svěžest? Když hledáte jemnější nebo každodennější variantu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Podívejte se na podrobnou prezentaci našich vložek (66 minut)</h5>
-<br>
-<li style="margin-bottom:3px">Unikátní program ženského zdraví (0:00)</li>
-<li style="margin-bottom:3px">výhody vložek tianDe oproti konkurenčním: bezpečnost a ženské zdraví (5:00)</li>
-<li style="margin-bottom:3px">Nejjemnější vložky Nebeská bavlna a Freshclick pro mladé dívky i těhotné (15:00)</li>
-<li style="margin-bottom:3px">Bylinné vložky Nefritová svěžest pro podporu ženského zdraví (18:00)</li>
-<li style="margin-bottom:3px">Jak podpořit hormonální rovnováhu s Energií bylin? (30:00)</li>
-<li style="margin-bottom:3px">Proč si hlídat pH intimních partií a jak na to (40:00)</li>
-<li style="margin-bottom:3px">Nejsilnější vložky Energie života - jak můžou pomoci v menopauze? (47:00)</li>
-<li style="margin-bottom:3px">Rekapitulace vložek a jak s nimi začít (60:00)</li>
-<br>
-<p style="margin:3px 0;font-size:13px">Kusy: 10 ks | Typ vložek: denní menstruační, Bylinné vložky | Produktová řada: Nefritová svěžest</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Dámské bylinné menstruační vložky Nefritová svěžest. denní super</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 61912</p>
+<p style="margin:3px 0;font-size:12px">Dámské bylinné menstruační vložky Nefritová svěžest. denní super doporučujeme tehdy, když potřebujete jasně vybrat menstruační variantu spíš na den, odpovídající míru jistoty a rychle poznat, kdy už je lepší sáhnout po blízké alternativě.</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (80x hodnoceno)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Vložky na silnější den: kdy doporučit denní super variantu</h3>
+<p style="margin:3px 0;font-size:12px">Dámské bylinné menstruační vložky Nefritová svěžest. denní super doporučujeme hlavně tehdy, když zákaznice nehledá obecně jen vložku, ale potřebuje rychle poznat, jestli je tahle varianta vhodná spíš na den, jakou míru jistoty nabídne a kdy už je lepší sáhnout po blízké alternativě.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Při menstruaci, kdy potřebujete jistotu odpovídající této variantě.</li>
+<li style="margin-bottom:2px">Když je potřeba rychle odlišit denní a noční použití nebo lehčí a silnější volbu.</li>
+<li style="margin-bottom:2px">Když zákaznice vybírá podle konkrétní situace a ne jen podle názvu řady.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">menstruační vložky Nefritová svěžest. denní super: volba pro den a konkrétní úroveň ochrany.</li>
+<li style="margin-bottom:2px">menstruační vložky Nefritová svěžest. noční super: dává větší smysl v sousední denní nebo noční situaci.</li>
+<li style="margin-bottom:2px">Denní vložky s extraktem aloe Nefritová svěžest: je vhodnější pro jemnější nebo nemenstruační použití.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když dává větší smysl Dámské bylinné menstruační vložky Nefritová svěžest. noční super.</li>
+<li style="margin-bottom:2px">Když už je vhodnější jemnější nebo běžnější varianta jako Denní vložky s extraktem aloe Nefritová svěžest.</li>
+<li style="margin-bottom:2px">Když nehledáte menstruační vložku, ale lehčí denní produkt.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">V úvodu hned vysvětlete, jestli jde o denní nebo noční variantu a pro jak silný režim se hodí.</li>
+<li style="margin-bottom:2px">Srovnávejte ji přímo s nejbližší alternativou v rámci stejné řady.</li>
+<li style="margin-bottom:2px">Vyjasněte hranici mezi běžným denním nošením a menstruačním použitím.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je nejlepší? Na situace, které odpovídají dotazu vložky na silnější den.</li>
+<li style="margin-bottom:2px">Kdy zvolit denní super a kdy noční super? Podle toho, jestli řešíte den a jakou míru jistoty potřebujete.</li>
+<li style="margin-bottom:2px">Kdy už je lepší Denní vložky s extraktem aloe Nefritová svěžest? Když hledáte jemnější nebo každodennější variantu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Podívejte se na podrobnou prezentaci našich vložek (66 minut)</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Unikátní program ženského zdraví (0:00)</li>
+<li style="margin-bottom:2px">výhody vložek tianDe oproti konkurenčním: bezpečnost a ženské zdraví (5:00)</li>
+<li style="margin-bottom:2px">Nejjemnější vložky Nebeská bavlna a Freshclick pro mladé dívky i těhotné (15:00)</li>
+<li style="margin-bottom:2px">Bylinné vložky Nefritová svěžest pro podporu ženského zdraví (18:00)</li>
+<li style="margin-bottom:2px">Jak podpořit hormonální rovnováhu s Energií bylin? (30:00)</li>
+<li style="margin-bottom:2px">Proč si hlídat pH intimních partií a jak na to (40:00)</li>
+<li style="margin-bottom:2px">Nejsilnější vložky Energie života - jak můžou pomoci v menopauze? (47:00)</li>
+<li style="margin-bottom:2px">Rekapitulace vložek a jak s nimi začít (60:00)</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">Kusy: 10 ks | Typ vložek: denní menstruační, Bylinné vložky | Produktová řada: Nefritová svěžest</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -1052,75 +975,63 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p6">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p6">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#6</span>
-      <code class="sku">61911</code>
-      <span class="sales">📦 2,187 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/denni-vlozky-s-extraktem-aloe-nefritova-svezest_z142/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">61911</span>
+      <span class="sales">📦 2,187 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/denni-vlozky-s-extraktem-aloe-nefritova-svezest_z142/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Denní vložky s extraktem aloe Nefritová svěžest</div>
+    <h2 class="product-title">Denní vložky s extraktem aloe Nefritová svěžest</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Denní vložky s extraktem aloe Nefritová svěžest</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 61911</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Denní vložky s extraktem aloe Nefritová svěžest doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (122x hodnoceno)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Denní vložky s aloe: kdy doporučit jemnější denní variantu</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Denní vložky s extraktem aloe Nefritová svěžest dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
-<li style="margin-bottom:3px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
-<li style="margin-bottom:3px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">Denní vložky s extraktem aloe Nefritová svěžest: řešení pro situace, kdy dává smysl právě denní vložky na každý den.</li>
-<li style="margin-bottom:3px">slipové vložky Nefritová svěžest: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
-<li style="margin-bottom:3px">menstruační vložky Nefritová svěžest. denní super: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když je vhodnější Dámské bylinné slipové vložky Nefritová svěžest.</li>
-<li style="margin-bottom:3px">Když už dává větší smysl Dámské bylinné menstruační vložky Nefritová svěžest. denní super.</li>
-<li style="margin-bottom:3px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
-<li style="margin-bottom:3px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
-<li style="margin-bottom:3px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je nejlepší? Především na situace, které odpovídají dotazu denní vložky na každý den.</li>
-<li style="margin-bottom:3px">Kdy zvolit s aloe a kdy slipové vložky Nefritová svěžest? Podle konkrétního profilu použití a očekávaného komfortu.</li>
-<li style="margin-bottom:3px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
-<br>
-<p style="margin:3px 0;font-size:13px">Kusy: 20 ks | Typ vložek: denní (intimky) | Produktová řada: Nefritová svěžest</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Denní vložky s extraktem aloe Nefritová svěžest</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 61911</p>
+<p style="margin:3px 0;font-size:12px">Denní vložky s extraktem aloe Nefritová svěžest doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (122x hodnoceno)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Denní vložky s aloe: kdy doporučit jemnější denní variantu</h3>
+<p style="margin:3px 0;font-size:12px">Denní vložky s extraktem aloe Nefritová svěžest dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
+<li style="margin-bottom:2px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
+<li style="margin-bottom:2px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Denní vložky s extraktem aloe Nefritová svěžest: řešení pro situace, kdy dává smysl právě denní vložky na každý den.</li>
+<li style="margin-bottom:2px">slipové vložky Nefritová svěžest: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
+<li style="margin-bottom:2px">menstruační vložky Nefritová svěžest. denní super: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když je vhodnější Dámské bylinné slipové vložky Nefritová svěžest.</li>
+<li style="margin-bottom:2px">Když už dává větší smysl Dámské bylinné menstruační vložky Nefritová svěžest. denní super.</li>
+<li style="margin-bottom:2px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
+<li style="margin-bottom:2px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
+<li style="margin-bottom:2px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je nejlepší? Především na situace, které odpovídají dotazu denní vložky na každý den.</li>
+<li style="margin-bottom:2px">Kdy zvolit s aloe a kdy slipové vložky Nefritová svěžest? Podle konkrétního profilu použití a očekávaného komfortu.</li>
+<li style="margin-bottom:2px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">Kusy: 20 ks | Typ vložek: denní (intimky) | Produktová řada: Nefritová svěžest</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -1236,75 +1147,63 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p7">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p7">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#7</span>
-      <code class="sku">63601</code>
-      <span class="sales">📦 2,021 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/denni-vlozka-energie-zivota_z94/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">63601</span>
+      <span class="sales">📦 2,021 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/denni-vlozka-energie-zivota_z94/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Denní vložka Energie života</div>
+    <h2 class="product-title">Denní vložka Energie života</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Denní vložka Energie života</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 63601</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Denní vložka Energie života doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (33x hodnoceno)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Jak vybrat intenzivní bylinná vložka: kdy doporučit Denní vložka Energie života</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Denní vložka Energie života dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
-<li style="margin-bottom:3px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
-<li style="margin-bottom:3px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">Denní vložka Energie života: řešení pro situace, kdy dává smysl právě intenzivní bylinná vložka.</li>
-<li style="margin-bottom:3px">Denní hygienická vložka Jemná péče: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
-<li style="margin-bottom:3px">slipové vložky Nefritová svěžest: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když je vhodnější Denní hygienická vložka Jemná péče.</li>
-<li style="margin-bottom:3px">Když už dává větší smysl Dámské bylinné slipové vložky Nefritová svěžest.</li>
-<li style="margin-bottom:3px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
-<li style="margin-bottom:3px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
-<li style="margin-bottom:3px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je Denní vložka Energie života nejlepší? Především na situace, které odpovídají dotazu intenzivní bylinná vložka.</li>
-<li style="margin-bottom:3px">Kdy zvolit Denní vložka Energie života a kdy Denní hygienická vložka Jemná péče? Podle konkrétního profilu použití a očekávaného komfortu.</li>
-<li style="margin-bottom:3px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
-<br>
-<p style="margin:3px 0;font-size:13px">Kusy: 1 ks | Typ vložek: speciální</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Denní vložka Energie života</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 63601</p>
+<p style="margin:3px 0;font-size:12px">Denní vložka Energie života doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (33x hodnoceno)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Jak vybrat intenzivní bylinná vložka: kdy doporučit Denní vložka Energie života</h3>
+<p style="margin:3px 0;font-size:12px">Denní vložka Energie života dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
+<li style="margin-bottom:2px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
+<li style="margin-bottom:2px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Denní vložka Energie života: řešení pro situace, kdy dává smysl právě intenzivní bylinná vložka.</li>
+<li style="margin-bottom:2px">Denní hygienická vložka Jemná péče: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
+<li style="margin-bottom:2px">slipové vložky Nefritová svěžest: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když je vhodnější Denní hygienická vložka Jemná péče.</li>
+<li style="margin-bottom:2px">Když už dává větší smysl Dámské bylinné slipové vložky Nefritová svěžest.</li>
+<li style="margin-bottom:2px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
+<li style="margin-bottom:2px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
+<li style="margin-bottom:2px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je Denní vložka Energie života nejlepší? Především na situace, které odpovídají dotazu intenzivní bylinná vložka.</li>
+<li style="margin-bottom:2px">Kdy zvolit Denní vložka Energie života a kdy Denní hygienická vložka Jemná péče? Podle konkrétního profilu použití a očekávaného komfortu.</li>
+<li style="margin-bottom:2px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">Kusy: 1 ks | Typ vložek: speciální</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -1420,75 +1319,63 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p8">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p8">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#8</span>
-      <code class="sku">61914</code>
-      <span class="sales">📦 1,845 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/damske-bylinne-slipove-vlozky-nefritova-svezest_z2025/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">61914</span>
+      <span class="sales">📦 1,845 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/damske-bylinne-slipove-vlozky-nefritova-svezest_z2025/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Dámské bylinné slipové vložky Nefritová svěžest</div>
+    <h2 class="product-title">Dámské bylinné slipové vložky Nefritová svěžest</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Dámské bylinné slipové vložky Nefritová svěžest</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 61914</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Dámské bylinné slipové vložky Nefritová svěžest doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.8 (119x hodnoceno)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Jak vybrat slipové vložky na celý den: kdy doporučit Dámské bylinné slipové vložky Nefritová svěžest</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Dámské bylinné slipové vložky Nefritová svěžest dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
-<li style="margin-bottom:3px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
-<li style="margin-bottom:3px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">slipové vložky Nefritová svěžest: řešení pro situace, kdy dává smysl právě slipové vložky na celý den.</li>
-<li style="margin-bottom:3px">slipové vložky Nefritová svěžest - super tenké: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
-<li style="margin-bottom:3px">slipové vložky s anionty Nefritová svěžest: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když je vhodnější Dámské bylinné slipové vložky Nefritová svěžest - super tenké.</li>
-<li style="margin-bottom:3px">Když už dává větší smysl Dámské bylinné slipové vložky s anionty Nefritová svěžest.</li>
-<li style="margin-bottom:3px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
-<li style="margin-bottom:3px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
-<li style="margin-bottom:3px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je nejlepší? Především na situace, které odpovídají dotazu slipové vložky na celý den.</li>
-<li style="margin-bottom:3px">Kdy zvolit slipové vložky Nefritová svěžest a kdy super tenké? Podle konkrétního profilu použití a očekávaného komfortu.</li>
-<li style="margin-bottom:3px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
-<br>
-<p style="margin:3px 0;font-size:13px">Kusy: 20 ks | Typ vložek: denní (intimky) | Produktová řada: Nefritová svěžest</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Dámské bylinné slipové vložky Nefritová svěžest</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 61914</p>
+<p style="margin:3px 0;font-size:12px">Dámské bylinné slipové vložky Nefritová svěžest doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.8 (119x hodnoceno)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Jak vybrat slipové vložky na celý den: kdy doporučit Dámské bylinné slipové vložky Nefritová svěžest</h3>
+<p style="margin:3px 0;font-size:12px">Dámské bylinné slipové vložky Nefritová svěžest dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
+<li style="margin-bottom:2px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
+<li style="margin-bottom:2px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">slipové vložky Nefritová svěžest: řešení pro situace, kdy dává smysl právě slipové vložky na celý den.</li>
+<li style="margin-bottom:2px">slipové vložky Nefritová svěžest - super tenké: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
+<li style="margin-bottom:2px">slipové vložky s anionty Nefritová svěžest: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když je vhodnější Dámské bylinné slipové vložky Nefritová svěžest - super tenké.</li>
+<li style="margin-bottom:2px">Když už dává větší smysl Dámské bylinné slipové vložky s anionty Nefritová svěžest.</li>
+<li style="margin-bottom:2px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
+<li style="margin-bottom:2px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
+<li style="margin-bottom:2px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je nejlepší? Především na situace, které odpovídají dotazu slipové vložky na celý den.</li>
+<li style="margin-bottom:2px">Kdy zvolit slipové vložky Nefritová svěžest a kdy super tenké? Podle konkrétního profilu použití a očekávaného komfortu.</li>
+<li style="margin-bottom:2px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">Kusy: 20 ks | Typ vložek: denní (intimky) | Produktová řada: Nefritová svěžest</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -1598,75 +1485,63 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p9">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p9">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#9</span>
-      <code class="sku">61902</code>
-      <span class="sales">📦 1,762 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/denni-menstruacni-vlozky-s-fytomembranou-energie-bylin_z134/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">61902</span>
+      <span class="sales">📦 1,762 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/denni-menstruacni-vlozky-s-fytomembranou-energie-bylin_z134/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Denní menstruační vložky s fytomembránou Energie bylin</div>
+    <h2 class="product-title">Denní menstruační vložky s fytomembránou Energie bylin</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Denní menstruační vložky s fytomembránou „Energie bylin&quot;</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 61902</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Denní menstruační vložky s fytomembránou „Energie bylin&quot; doporučujeme tehdy, když potřebujete jasně vybrat menstruační variantu spíš na den, odpovídající míru jistoty a rychle poznat, kdy už je lepší sáhnout po blízké alternativě.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (70x hodnoceno)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Denní vložky s bylinami: kdy doporučit Energii bylin na den</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Denní menstruační vložky s fytomembránou „Energie bylin&quot; doporučujeme hlavně tehdy, když zákaznice nehledá obecně jen vložku, ale potřebuje rychle poznat, jestli je tahle varianta vhodná spíš na den, jakou míru jistoty nabídne a kdy už je lepší sáhnout po blízké alternativě.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Při menstruaci, kdy potřebujete jistotu odpovídající této variantě.</li>
-<li style="margin-bottom:3px">Když je potřeba rychle odlišit denní a noční použití nebo lehčí a silnější volbu.</li>
-<li style="margin-bottom:3px">Když zákaznice vybírá podle konkrétní situace a ne jen podle názvu řady.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">Denní menstruační vložky s fytomembránou „Energie bylin&quot;: volba pro den a konkrétní úroveň ochrany.</li>
-<li style="margin-bottom:3px">Noční menstruační vložky s fytomembránou „Energie bylin&quot;: dává větší smysl v sousední denní nebo noční situaci.</li>
-<li style="margin-bottom:3px">Denní vložka Energie života: je vhodnější pro jemnější nebo nemenstruační použití.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když dává větší smysl Noční menstruační vložky s fytomembránou „Energie bylin&quot;.</li>
-<li style="margin-bottom:3px">Když už je vhodnější jemnější nebo běžnější varianta jako Denní vložka Energie života.</li>
-<li style="margin-bottom:3px">Když nehledáte menstruační vložku, ale lehčí denní produkt.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">V úvodu hned vysvětlete, jestli jde o denní nebo noční variantu a pro jak silný režim se hodí.</li>
-<li style="margin-bottom:3px">Srovnávejte ji přímo s nejbližší alternativou v rámci stejné řady.</li>
-<li style="margin-bottom:3px">Vyjasněte hranici mezi běžným denním nošením a menstruačním použitím.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je nejlepší? Na situace, které odpovídají dotazu denní menstruační vložky s bylinami.</li>
-<li style="margin-bottom:3px">Kdy zvolit denní a kdy noční variantu Energie bylin? Podle toho, jestli řešíte den a jakou míru jistoty potřebujete.</li>
-<li style="margin-bottom:3px">Kdy už je lepší Denní vložka Energie života? Když hledáte jemnější nebo každodennější variantu.</li>
-<br>
-<p style="margin:3px 0;font-size:13px">Kusy: 8 ks | Reálná hmotnost: 63 g | Typ vložek: denní menstruační | Produktová řada: Energie bylin</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Denní menstruační vložky s fytomembránou „Energie bylin"</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 61902</p>
+<p style="margin:3px 0;font-size:12px">Denní menstruační vložky s fytomembránou „Energie bylin" doporučujeme tehdy, když potřebujete jasně vybrat menstruační variantu spíš na den, odpovídající míru jistoty a rychle poznat, kdy už je lepší sáhnout po blízké alternativě.</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (70x hodnoceno)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Denní vložky s bylinami: kdy doporučit Energii bylin na den</h3>
+<p style="margin:3px 0;font-size:12px">Denní menstruační vložky s fytomembránou „Energie bylin" doporučujeme hlavně tehdy, když zákaznice nehledá obecně jen vložku, ale potřebuje rychle poznat, jestli je tahle varianta vhodná spíš na den, jakou míru jistoty nabídne a kdy už je lepší sáhnout po blízké alternativě.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Při menstruaci, kdy potřebujete jistotu odpovídající této variantě.</li>
+<li style="margin-bottom:2px">Když je potřeba rychle odlišit denní a noční použití nebo lehčí a silnější volbu.</li>
+<li style="margin-bottom:2px">Když zákaznice vybírá podle konkrétní situace a ne jen podle názvu řady.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Denní menstruační vložky s fytomembránou „Energie bylin": volba pro den a konkrétní úroveň ochrany.</li>
+<li style="margin-bottom:2px">Noční menstruační vložky s fytomembránou „Energie bylin": dává větší smysl v sousední denní nebo noční situaci.</li>
+<li style="margin-bottom:2px">Denní vložka Energie života: je vhodnější pro jemnější nebo nemenstruační použití.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když dává větší smysl Noční menstruační vložky s fytomembránou „Energie bylin".</li>
+<li style="margin-bottom:2px">Když už je vhodnější jemnější nebo běžnější varianta jako Denní vložka Energie života.</li>
+<li style="margin-bottom:2px">Když nehledáte menstruační vložku, ale lehčí denní produkt.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">V úvodu hned vysvětlete, jestli jde o denní nebo noční variantu a pro jak silný režim se hodí.</li>
+<li style="margin-bottom:2px">Srovnávejte ji přímo s nejbližší alternativou v rámci stejné řady.</li>
+<li style="margin-bottom:2px">Vyjasněte hranici mezi běžným denním nošením a menstruačním použitím.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je nejlepší? Na situace, které odpovídají dotazu denní menstruační vložky s bylinami.</li>
+<li style="margin-bottom:2px">Kdy zvolit denní a kdy noční variantu Energie bylin? Podle toho, jestli řešíte den a jakou míru jistoty potřebujete.</li>
+<li style="margin-bottom:2px">Kdy už je lepší Denní vložka Energie života? Když hledáte jemnější nebo každodennější variantu.</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">Kusy: 8 ks | Reálná hmotnost: 63 g | Typ vložek: denní menstruační | Produktová řada: Energie bylin</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -1776,75 +1651,63 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p10">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p10">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#10</span>
-      <code class="sku">30117</code>
-      <span class="sales">📦 1,706 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/kosmeticka-fytonaplast-jian-kang_z3158/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">30117</span>
+      <span class="sales">📦 1,706 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/kosmeticka-fytonaplast-jian-kang_z3158/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Kosmetická fytonáplast Jian Kang</div>
+    <h2 class="product-title">Kosmetická fytonáplast Jian Kang</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Kosmetická fytonáplast Jian Kang</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 30117</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Kosmetická fytonáplast Jian Kang doporučujeme, pokud hledáte bylinná náplast na namáhané partie a chcete jednoduchou lokální variantu bez mazání. Hodí se hlavně po námaze, při dlouhém sezení nebo večer doma, když dává smysl hřejivá lokální péče.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (227x hodnoceno)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Hřejivá náplast na záda a namáhané partie: kdy doporučit Kosmetická fytonáplast Jian Kang</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Kosmetická fytonáplast Jian Kang dává smysl hlavně tehdy, když hledáte jednoduchou lokální náplast na záda, ramena nebo jiné namáhané partie a nechcete gel ani krém. Největší výhodou je cílená aplikace na konkrétní místo a rychlé rozhodnutí, kdy zvolit právě náplast místo Kosmetická fytonáplast Wutong nebo Masážní gel Orthophyt.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Na záda, ramena nebo další namáhané partie po zátěži.</li>
-<li style="margin-bottom:3px">Když chcete lokální péči bez masáže a bez mazání.</li>
-<li style="margin-bottom:3px">Na večer doma nebo na cestách, když je náplast praktičtější než gel.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">fytonáplast Jian Kang: náplast na konkrétní místo bez mazání.</li>
-<li style="margin-bottom:3px">fytonáplast Wutong: dává větší smysl v trochu jiném typu lokální aplikace.</li>
-<li style="margin-bottom:3px">Masážní gel Orthophyt: hodí se spíš tehdy, když uživatel preferuje gelovou nebo masážní variantu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Pokud dává větší smysl Kosmetická fytonáplast Wutong.</li>
-<li style="margin-bottom:3px">Pokud hledáte chladivý nebo masážní produkt místo náplasti.</li>
-<li style="margin-bottom:3px">Pokud řešíte jiný problém než lokální péči o namáhané partie.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Nastříhejte náplast podle velikosti místa, které chcete pokrýt.</li>
-<li style="margin-bottom:3px">Nalepte na čistou a suchou pokožku.</li>
-<li style="margin-bottom:3px">Vyhodnoťte hlavně konkrétní situaci použití, ne jen název produktu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je Kosmetická fytonáplast Jian Kang nejlepší? Na lokální péči o namáhané partie po zátěži nebo dlouhém sezení.</li>
-<li style="margin-bottom:3px">Kdy zvolit Jian Kang a kdy Wutong? Podle konkrétního místa, velikosti plochy a preferovaného typu aplikace.</li>
-<li style="margin-bottom:3px">Je lepší náplast nebo gel? Podle toho, jestli chcete lokální nalepovací řešení, nebo masážní použití.</li>
-<br>
-<p style="margin:3px 0;font-size:13px">Kusy: 1 ks</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Kosmetická fytonáplast Jian Kang</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 30117</p>
+<p style="margin:3px 0;font-size:12px">Kosmetická fytonáplast Jian Kang doporučujeme, pokud hledáte bylinná náplast na namáhané partie a chcete jednoduchou lokální variantu bez mazání. Hodí se hlavně po námaze, při dlouhém sezení nebo večer doma, když dává smysl hřejivá lokální péče.</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (227x hodnoceno)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Hřejivá náplast na záda a namáhané partie: kdy doporučit Kosmetická fytonáplast Jian Kang</h3>
+<p style="margin:3px 0;font-size:12px">Kosmetická fytonáplast Jian Kang dává smysl hlavně tehdy, když hledáte jednoduchou lokální náplast na záda, ramena nebo jiné namáhané partie a nechcete gel ani krém. Největší výhodou je cílená aplikace na konkrétní místo a rychlé rozhodnutí, kdy zvolit právě náplast místo Kosmetická fytonáplast Wutong nebo Masážní gel Orthophyt.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na záda, ramena nebo další namáhané partie po zátěži.</li>
+<li style="margin-bottom:2px">Když chcete lokální péči bez masáže a bez mazání.</li>
+<li style="margin-bottom:2px">Na večer doma nebo na cestách, když je náplast praktičtější než gel.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">fytonáplast Jian Kang: náplast na konkrétní místo bez mazání.</li>
+<li style="margin-bottom:2px">fytonáplast Wutong: dává větší smysl v trochu jiném typu lokální aplikace.</li>
+<li style="margin-bottom:2px">Masážní gel Orthophyt: hodí se spíš tehdy, když uživatel preferuje gelovou nebo masážní variantu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Pokud dává větší smysl Kosmetická fytonáplast Wutong.</li>
+<li style="margin-bottom:2px">Pokud hledáte chladivý nebo masážní produkt místo náplasti.</li>
+<li style="margin-bottom:2px">Pokud řešíte jiný problém než lokální péči o namáhané partie.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Nastříhejte náplast podle velikosti místa, které chcete pokrýt.</li>
+<li style="margin-bottom:2px">Nalepte na čistou a suchou pokožku.</li>
+<li style="margin-bottom:2px">Vyhodnoťte hlavně konkrétní situaci použití, ne jen název produktu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je Kosmetická fytonáplast Jian Kang nejlepší? Na lokální péči o namáhané partie po zátěži nebo dlouhém sezení.</li>
+<li style="margin-bottom:2px">Kdy zvolit Jian Kang a kdy Wutong? Podle konkrétního místa, velikosti plochy a preferovaného typu aplikace.</li>
+<li style="margin-bottom:2px">Je lepší náplast nebo gel? Podle toho, jestli chcete lokální nalepovací řešení, nebo masážní použití.</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">Kusy: 1 ks</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -1973,80 +1836,68 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p11">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p11">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#11</span>
-      <code class="sku">61915</code>
-      <span class="sales">📦 1,662 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/damske-bylinne-slipove-vlozky-s-anionty-nefritova-svezest_z2110/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">61915</span>
+      <span class="sales">📦 1,662 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/damske-bylinne-slipove-vlozky-s-anionty-nefritova-svezest_z2110/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Dámské bylinné slipové vložky s anionty Nefritová svěžest</div>
+    <h2 class="product-title">Dámské bylinné slipové vložky s anionty Nefritová svěžest</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Dámské bylinné slipové vložky s anionty Nefritová svěžest</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 61915</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Dámské bylinné slipové vložky s anionty Nefritová svěžest doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (179x hodnoceno)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Jak vybrat slipové vložky s anionty: kdy doporučit Dámské bylinné slipové vložky s anionty Nefritová svěžest</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Dámské bylinné slipové vložky s anionty Nefritová svěžest dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
-<li style="margin-bottom:3px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
-<li style="margin-bottom:3px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">slipové vložky s anionty Nefritová svěžest: řešení pro situace, kdy dává smysl právě slipové vložky s anionty.</li>
-<li style="margin-bottom:3px">slipové vložky Nefritová svěžest: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
-<li style="margin-bottom:3px">Slipové vložky se stříbrem. super tenké: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když je vhodnější Dámské bylinné slipové vložky Nefritová svěžest.</li>
-<li style="margin-bottom:3px">Když už dává větší smysl Slipové vložky se stříbrem. super tenké.</li>
-<li style="margin-bottom:3px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
-<li style="margin-bottom:3px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
-<li style="margin-bottom:3px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak pohodlné jsou slipové vložky s Anionty?</h5>
-<br>
-<li style="margin-bottom:3px">Podívejte se, jak tenké a jemné jsou tyto intimky.</li>
-<li style="margin-bottom:3px">Dodají vám pocit svěžesti, komfortu a pohodlí po celý den.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co jsou nejlepší? Především na situace, které odpovídají dotazu slipové vložky s anionty.</li>
-<li style="margin-bottom:3px">Kdy zvolit s anionty a kdy bez aniontů? Podle konkrétního profilu použití a očekávaného komfortu.</li>
-<li style="margin-bottom:3px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
-<br>
-<p style="margin:3px 0;font-size:13px">Kusy: 20 ks | Typ vložek: denní (intimky) | Produktová řada: Nefritová svěžest</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Dámské bylinné slipové vložky s anionty Nefritová svěžest</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 61915</p>
+<p style="margin:3px 0;font-size:12px">Dámské bylinné slipové vložky s anionty Nefritová svěžest doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (179x hodnoceno)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Jak vybrat slipové vložky s anionty: kdy doporučit Dámské bylinné slipové vložky s anionty Nefritová svěžest</h3>
+<p style="margin:3px 0;font-size:12px">Dámské bylinné slipové vložky s anionty Nefritová svěžest dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
+<li style="margin-bottom:2px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
+<li style="margin-bottom:2px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">slipové vložky s anionty Nefritová svěžest: řešení pro situace, kdy dává smysl právě slipové vložky s anionty.</li>
+<li style="margin-bottom:2px">slipové vložky Nefritová svěžest: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
+<li style="margin-bottom:2px">Slipové vložky se stříbrem. super tenké: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když je vhodnější Dámské bylinné slipové vložky Nefritová svěžest.</li>
+<li style="margin-bottom:2px">Když už dává větší smysl Slipové vložky se stříbrem. super tenké.</li>
+<li style="margin-bottom:2px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
+<li style="margin-bottom:2px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
+<li style="margin-bottom:2px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak pohodlné jsou slipové vložky s Anionty?</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Podívejte se, jak tenké a jemné jsou tyto intimky.</li>
+<li style="margin-bottom:2px">Dodají vám pocit svěžesti, komfortu a pohodlí po celý den.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co jsou nejlepší? Především na situace, které odpovídají dotazu slipové vložky s anionty.</li>
+<li style="margin-bottom:2px">Kdy zvolit s anionty a kdy bez aniontů? Podle konkrétního profilu použití a očekávaného komfortu.</li>
+<li style="margin-bottom:2px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">Kusy: 20 ks | Typ vložek: denní (intimky) | Produktová řada: Nefritová svěžest</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -2152,73 +2003,62 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p12">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p12">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#12</span>
-      <code class="sku">135460</code>
-      <span class="sales">📦 1,659 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/instantni-napoj-s-cekankou-a-l-karnitinem_z5017/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">135460</span>
+      <span class="sales">📦 1,659 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/instantni-napoj-s-cekankou-a-l-karnitinem_z5017/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Instantní nápoj s čekankou a L-karnitinem</div>
+    <h2 class="product-title">Instantní nápoj s čekankou a L-karnitinem</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Instantní nápoj s čekankou a L-karnitinem</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 135460</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Instantní nápoj s čekankou a L-karnitinem má největší smysl ve chvíli, kdy nehledáte jen další sladký instantní nápoj, ale funkční pitný doplněk do běžného režimu. Důležité je vysvětlit, kdy ho zařadit do dne, pro koho dává smysl a čím se liší od běžných alternativ.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Ráno nebo dopoledne, když chcete zařadit funkční nápoj do běžného režimu.</li>
-<li style="margin-bottom:3px">Když hledáte lehčí alternativu k běžným sladkým instantním nápojům.</li>
-<li style="margin-bottom:3px">Když vás zajímá spíš použití v režimu a životním stylu než samotné složení.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Pro koho je vhodný</h5>
-<br>
-<li style="margin-bottom:3px">Pro lidi, kteří chtějí doplnit pitný režim a běžnou denní rutinu.</li>
-<li style="margin-bottom:3px">Pro zákazníky, které zajímá čekankový nápoj v kontextu zdravého životního stylu.</li>
-<li style="margin-bottom:3px">Pro ty, kdo chtějí produkt používat pravidelně a vědět, kdy dává největší smysl.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když hledáte spíš klasickou kávu nebo jiný typ instantního nápoje.</li>
-<li style="margin-bottom:3px">Když dává větší smysl káva nebo sladký instantní nápoj.</li>
-<li style="margin-bottom:3px">Když zákazník hledá spíš jiné funkční nápoje bez čekanky než čekankový nápoj.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Vysvětlete kdy během dne dává smysl a jak ho zařadit do rutiny.</li>
-<li style="margin-bottom:3px">Mluvte víc o reálném použití než o katalogovém výčtu vlastností.</li>
-<li style="margin-bottom:3px">Pomozte zákazníkovi pochopit, že jde o funkční nápoj do režimu, ne jen další sladkou alternativu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Kdy pít čekankový nápoj s L-karnitinem? Nejčastěji ráno nebo dopoledne jako součást běžného režimu.</li>
-<li style="margin-bottom:3px">Je to spíš nápoj do zdravého životního stylu, nebo jen instantní alternativa? Důležité je vést text hlavně první variantou.</li>
-<li style="margin-bottom:3px">Kdy zvolit jiný produkt? Když hledáte úplně jiný typ nápoje nebo jiný režim použití.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Složení jednoho sáčku 3 g</h5>
-<br>
-<p style="margin:3px 0;font-size:13px">čekanka, prášek - 2 295 mg; cedrový ořech, prášek - 405 mg; inulin – 144 mg; L-karnitin L-tartrát- 60 mg; extrakt blizny kukuřice seté – 60 mg; extrakt pomerančovníku hořkého (s obsahem synefrinu 10 %) - 16,5 mg, extrakt zázvoru – 12 mg; skořice, prášek - 4,5 mg; kardamom, prášek – 2,85 mg; chrom (pikolinát chromitý) – 18,6 µg (46,5 % RHP*). * Referenční Hodnota Příjmu</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Upozornění: není určeno dětem. Nevhodné pro těhotné a kojící ženy. Nepřekračujte doporučenou denní dávku. Možná nesnášenlivost k některému komponentu doplňku stravy. Doplňky stravy nejsou náhradou pestré stravy. Uchovávejte mimo dosah dětí.</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Instantní nápoj s čekankou a L-karnitinem</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 135460</p>
+<p style="margin:3px 0;font-size:12px">Instantní nápoj s čekankou a L-karnitinem má největší smysl ve chvíli, kdy nehledáte jen další sladký instantní nápoj, ale funkční pitný doplněk do běžného režimu. Důležité je vysvětlit, kdy ho zařadit do dne, pro koho dává smysl a čím se liší od běžných alternativ.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Ráno nebo dopoledne, když chcete zařadit funkční nápoj do běžného režimu.</li>
+<li style="margin-bottom:2px">Když hledáte lehčí alternativu k běžným sladkým instantním nápojům.</li>
+<li style="margin-bottom:2px">Když vás zajímá spíš použití v režimu a životním stylu než samotné složení.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Pro koho je vhodný</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Pro lidi, kteří chtějí doplnit pitný režim a běžnou denní rutinu.</li>
+<li style="margin-bottom:2px">Pro zákazníky, které zajímá čekankový nápoj v kontextu zdravého životního stylu.</li>
+<li style="margin-bottom:2px">Pro ty, kdo chtějí produkt používat pravidelně a vědět, kdy dává největší smysl.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když hledáte spíš klasickou kávu nebo jiný typ instantního nápoje.</li>
+<li style="margin-bottom:2px">Když dává větší smysl káva nebo sladký instantní nápoj.</li>
+<li style="margin-bottom:2px">Když zákazník hledá spíš jiné funkční nápoje bez čekanky než čekankový nápoj.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Vysvětlete kdy během dne dává smysl a jak ho zařadit do rutiny.</li>
+<li style="margin-bottom:2px">Mluvte víc o reálném použití než o katalogovém výčtu vlastností.</li>
+<li style="margin-bottom:2px">Pomozte zákazníkovi pochopit, že jde o funkční nápoj do režimu, ne jen další sladkou alternativu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Kdy pít čekankový nápoj s L-karnitinem? Nejčastěji ráno nebo dopoledne jako součást běžného režimu.</li>
+<li style="margin-bottom:2px">Je to spíš nápoj do zdravého životního stylu, nebo jen instantní alternativa? Důležité je vést text hlavně první variantou.</li>
+<li style="margin-bottom:2px">Kdy zvolit jiný produkt? Když hledáte úplně jiný typ nápoje nebo jiný režim použití.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Složení jednoho sáčku 3 g</h4>
+<p style="margin:3px 0;font-size:12px">čekanka, prášek - 2 295 mg; cedrový ořech, prášek - 405 mg; inulin – 144 mg; L-karnitin L-tartrát- 60 mg; extrakt blizny kukuřice seté – 60 mg; extrakt pomerančovníku hořkého (s obsahem synefrinu 10 %) - 16,5 mg, extrakt zázvoru – 12 mg; skořice, prášek - 4,5 mg; kardamom, prášek – 2,85 mg; chrom (pikolinát chromitý) – 18,6 µg (46,5 % RHP*). * Referenční Hodnota Příjmu</p>
+<p style="margin:3px 0;font-size:12px">Upozornění: není určeno dětem. Nevhodné pro těhotné a kojící ženy. Nepřekračujte doporučenou denní dávku. Možná nesnášenlivost k některému komponentu doplňku stravy. Doplňky stravy nejsou náhradou pestré stravy. Uchovávejte mimo dosah dětí.</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -2361,79 +2201,68 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p13">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p13">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#13</span>
-      <code class="sku">30111</code>
-      <span class="sales">📦 1,564 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/kosmeticka-telova-fytonaplast-yaoshen-forte_z2418/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">30111</span>
+      <span class="sales">📦 1,564 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/kosmeticka-telova-fytonaplast-yaoshen-forte_z2418/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Kosmetická tělová fytonáplast Yaoshen Forte</div>
+    <h2 class="product-title">Kosmetická tělová fytonáplast Yaoshen Forte</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Kosmetická tělová fytonáplast Yaoshen Forte</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 30111</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Kosmetická tělová fytonáplast Yaoshen Forte doporučujeme hlavně ve chvíli, kdy dává větší smysl lokální hřejivá náplast než gel. Nejdůležitější je rychle vysvětlit použití na namáhané partie, rozdíl proti Kosmetická tělová fytonáplast Zhui Feng Forte a situace, kdy dává náplast největší smysl.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Nejvíc rozhoduje, jestli chcete praktickou náplast na konkrétní místo, nebo raději gel či jinou lokální variantu jako Kosmetická tělová fytonáplast Zhui Feng Forte a Kosmetická fytonáplast Wutong.</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Náplast na záda a ramena po námaze: kdy doporučit Kosmetická tělová fytonáplast Yaoshen Forte</h4>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Komu náplast sedí nejvíc</h5>
-<br>
-<li style="margin-bottom:3px">Pro lidi s namáhanými partiemi po práci, sportu nebo dlouhém sezení.</li>
-<li style="margin-bottom:3px">Pro ty, kdo chtějí lokální péči bez masáže a bez mazání.</li>
-<li style="margin-bottom:3px">Pro uživatele, kteří ocení jednoduchou aplikaci na konkrétní místo.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy po ní sáhnout</h5>
-<br>
-<li style="margin-bottom:3px">Na záda, ramena nebo další zatěžované oblasti po námaze.</li>
-<li style="margin-bottom:3px">Když chcete lokální řešení bez roztírání.</li>
-<li style="margin-bottom:3px">Když potřebujete rychle rozhodnout mezi náplastí a gelem.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy raději zvolit jinou formu</h5>
-<br>
-<li style="margin-bottom:3px">Pokud chcete spíš masážní péči, dává větší smysl Kosmetická tělová fytonáplast Zhui Feng Forte.</li>
-<li style="margin-bottom:3px">Pokud hledáte jiný profil lokální náplasti, porovnejte i Kosmetická fytonáplast Wutong.</li>
-<li style="margin-bottom:3px">Pokud řešíte spíš těžké nohy nebo celkovou únavu, nemusí být náplast první volba.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Co rozhoduje při výběru</h5>
-<br>
-<li style="margin-bottom:3px">Jednoduchá lokální aplikace bez mazání.</li>
-<li style="margin-bottom:3px">Snadné zařazení do domácí rutiny po zátěži.</li>
-<li style="margin-bottom:3px">Jasnější rozhodnutí mezi náplastí, gelem a jinou variantou péče.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout během minuty</h5>
-<br>
-<li style="margin-bottom:3px">Ujasněte si, jestli chcete náplast na konkrétní místo, nebo spíš gel či masážní variantu.</li>
-<li style="margin-bottom:3px">Rozhodněte se podle toho, jak rychlou a jak praktickou aplikaci během dne potřebujete.</li>
-<li style="margin-bottom:3px">Pokud váháte, porovnejte hlavně použití této varianty s Kosmetická tělová fytonáplast Zhui Feng Forte a Kosmetická fytonáplast Wutong.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Časté otázky před nákupem</h5>
-<br>
-<li style="margin-bottom:3px">Na co je Kosmetická tělová fytonáplast Yaoshen Forte nejlepší? Na lokální péči o namáhané partie po zátěži.</li>
-<li style="margin-bottom:3px">Kdy zvolit Yaoshen Forte a kdy Zhui Feng Forte? Když chcete náplast místo masážního gelu.</li>
-<li style="margin-bottom:3px">Kdy už dává větší smysl Kosmetická fytonáplast Wutong? Když potřebujete jiný typ lokální aplikace.</li>
-<br>
-<p style="margin:3px 0;font-size:13px">Aktivní složky náplasti „Yaoshen forte&quot; mají blahodárný vliv na stav ledvin a vylučovací soustavu. Mužům toto aktivní složení navíc pomáhá navrátit sebevědomí a víru ve vlastní síly. Složení náplasti „Yaoshen forte&quot; je nyní ještě pestřejší a účinnější – 19 aktivních složek, mezi které patří různorodé výtažky a oleje, mají cílený účinek. Jednou z hlavních výhod transdermální terapie je skutečnost, že účinné látky se dostávají tam, kde jsou potřeba, aniž by vstupovaly do trávicí soustavy.</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Kosmetická tělová fytonáplast Yaoshen Forte</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 30111</p>
+<p style="margin:3px 0;font-size:12px">Kosmetická tělová fytonáplast Yaoshen Forte doporučujeme hlavně ve chvíli, kdy dává větší smysl lokální hřejivá náplast než gel. Nejdůležitější je rychle vysvětlit použití na namáhané partie, rozdíl proti Kosmetická tělová fytonáplast Zhui Feng Forte a situace, kdy dává náplast největší smysl.</p>
+<p style="margin:3px 0;font-size:12px">Nejvíc rozhoduje, jestli chcete praktickou náplast na konkrétní místo, nebo raději gel či jinou lokální variantu jako Kosmetická tělová fytonáplast Zhui Feng Forte a Kosmetická fytonáplast Wutong.</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Náplast na záda a ramena po námaze: kdy doporučit Kosmetická tělová fytonáplast Yaoshen Forte</h3>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Komu náplast sedí nejvíc</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Pro lidi s namáhanými partiemi po práci, sportu nebo dlouhém sezení.</li>
+<li style="margin-bottom:2px">Pro ty, kdo chtějí lokální péči bez masáže a bez mazání.</li>
+<li style="margin-bottom:2px">Pro uživatele, kteří ocení jednoduchou aplikaci na konkrétní místo.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy po ní sáhnout</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na záda, ramena nebo další zatěžované oblasti po námaze.</li>
+<li style="margin-bottom:2px">Když chcete lokální řešení bez roztírání.</li>
+<li style="margin-bottom:2px">Když potřebujete rychle rozhodnout mezi náplastí a gelem.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy raději zvolit jinou formu</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Pokud chcete spíš masážní péči, dává větší smysl Kosmetická tělová fytonáplast Zhui Feng Forte.</li>
+<li style="margin-bottom:2px">Pokud hledáte jiný profil lokální náplasti, porovnejte i Kosmetická fytonáplast Wutong.</li>
+<li style="margin-bottom:2px">Pokud řešíte spíš těžké nohy nebo celkovou únavu, nemusí být náplast první volba.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Co rozhoduje při výběru</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Jednoduchá lokální aplikace bez mazání.</li>
+<li style="margin-bottom:2px">Snadné zařazení do domácí rutiny po zátěži.</li>
+<li style="margin-bottom:2px">Jasnější rozhodnutí mezi náplastí, gelem a jinou variantou péče.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout během minuty</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Ujasněte si, jestli chcete náplast na konkrétní místo, nebo spíš gel či masážní variantu.</li>
+<li style="margin-bottom:2px">Rozhodněte se podle toho, jak rychlou a jak praktickou aplikaci během dne potřebujete.</li>
+<li style="margin-bottom:2px">Pokud váháte, porovnejte hlavně použití této varianty s Kosmetická tělová fytonáplast Zhui Feng Forte a Kosmetická fytonáplast Wutong.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Časté otázky před nákupem</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je Kosmetická tělová fytonáplast Yaoshen Forte nejlepší? Na lokální péči o namáhané partie po zátěži.</li>
+<li style="margin-bottom:2px">Kdy zvolit Yaoshen Forte a kdy Zhui Feng Forte? Když chcete náplast místo masážního gelu.</li>
+<li style="margin-bottom:2px">Kdy už dává větší smysl Kosmetická fytonáplast Wutong? Když potřebujete jiný typ lokální aplikace.</li>
+</ul>
+<p style="margin:3px 0;font-size:12px">Aktivní složky náplasti „Yaoshen forte" mají blahodárný vliv na stav ledvin a vylučovací soustavu. Mužům toto aktivní složení navíc pomáhá navrátit sebevědomí a víru ve vlastní síly. Složení náplasti „Yaoshen forte" je nyní ještě pestřejší a účinnější – 19 aktivních složek, mezi které patří různorodé výtažky a oleje, mají cílený účinek. Jednou z hlavních výhod transdermální terapie je skutečnost, že účinné látky se dostávají tam, kde jsou potřeba, aniž by vstupovaly do trávicí soustavy.</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -2486,7 +2315,7 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
 
 <section class="product-intro">
   <h2>Yaoshen Forte — tělová fytonáplast s 19 složkami pro oblast beder a vitalitu</h2>
-  <p><strong>Kosmetická tělová fytonáplast Yaoshen Forte (30111) je speciální nalepovací přípravek s 19 aktivními složkami zaměřený na oblast beder, ledvin a vylučovací soustavy</strong> — s využitím transdermálního přenosu, kdy bylinné látky prostupují přímo do tkání bez zatížení trávicího traktu. Oblíbená volba mužů pro podporu vitality.</p>
+  <p><strong>Kosmetická tělová fytonáplast Yaoshen Forte (30111) je nalepovací přípravek s 19 aktivními složkami pro oblast beder, ledvin a vylučovací soustavy</strong> — bylinné látky prostupují přes pokožku přímo do tkání bez zatížení trávicího traktu (transdermální přenos). Navíc u mužů složení tradičně podporuje vitalitu a sebevědomí.</p>
 </section>
 
 <section class="what-where">
@@ -2510,14 +2339,14 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   <p><strong>Transdermální přenos</strong> je klíčová výhoda: látky z náplasti prostupují pokožkou přímo do podkožní tkáně. Žádný průchod žaludkem — přímé lokální působení bez zatížení trávicí soustavy.</p>
   <ul>
     <li>✓ <strong>19 aktivních složek</strong> — pestřejší složení než standardní Yaoshen</li>
-    <li>✓ Transdermální přenos — látky přímo do tkání</li>
-    <li>✓ Pro muže: podpora vitality a sebevědomí</li>
+    <li>✓ Transdermální přenos — látky přímo do tkání bez průchodu trávicím traktem</li>
+    <li>✓ Navíc pro muže: bylinný komplex tradičně spojený s vitality a sebevědomím</li>
   </ul>
 </section>
 
 <section class="for-men">
-  <h3>Yaoshen Forte a mužská vitalita</h3>
-  <p>V tradiční čínské medicíně oblast ledvin úzce souvisí s vitální energií (čchi), mužskou sílou a celkovým sebevědomím. Yaoshen Forte kombinuje bylinný přístup s moderní formou náplasti — diskrétní, pohodlné, bez koktejlů nebo tablet.</p>
+  <h3>Přidaný benefit pro muže</h3>
+  <p>V tradiční čínské medicíně je oblast ledvin úzce spojena s vitální energií (čchi) a celkovou pohodou. Yaoshen Forte proto jako vedlejší benefit přináší mužům podporu sebevědomí a vitality — diskrétně, pohodlně, bez tablet nebo doplňků stravy.</p>
 </section>
 
 <section class="comparison-block">
@@ -2527,7 +2356,7 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
       <tr><th>Přípravek</th><th>Oblast aplikace</th><th>Zaměření</th><th>Složky</th></tr>
     </thead>
     <tbody>
-      <tr style="background:#e8f5e9;"><td><strong>Yaoshen Forte 30111</strong></td><td>Spodní záda / ledviny</td><td>Ledviny, vitalita, muži</td><td>19 aktivních složek</td></tr>
+      <tr style="background:#e8f5e9;"><td><strong>Yaoshen Forte 30111</strong></td><td>Spodní záda / ledviny</td><td>Ledviny a vylučovací soustava (+vitalita u mužů)</td><td>19 aktivních složek</td></tr>
       <tr><td>Jian Kang 30117</td><td>Záda, ramena, klouby</td><td>Svalová únava, pohyb</td><td>Bylinný komplex, nastříhat</td></tr>
       <tr><td>Wutong 30118</td><td>Záda, ramena, klouby</td><td>Svalová únava, hřátí</td><td>Bylinný komplex</td></tr>
     </tbody>
@@ -2555,8 +2384,8 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 
   <details>
-    <summary>Je vhodný i pro ženy?</summary>
-    <p>Ano — bylinky pro oblast ledvin a vylučovací soustavy jsou benefiční pro obě pohlaví. Pro muže je ale specificky zmiňovaná podpora vitality a sebevědomí.</p>
+    <summary>Je Yaoshen Forte jen pro muže?</summary>
+    <p>Ne — primárně je určen pro každého, kdo chce podpořit oblast ledvin a vylučovací soustavy. U mužů složení navíc tradičně podporuje vitalitu a sebevědomí, ale to není jeho hlavní ani jediné zaměření.</p>
   </details>
 
   <details>
@@ -2570,47 +2399,34 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p14">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p14">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#14</span>
-      <code class="sku">41105</code>
-      <span class="sales">📦 1,504 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/regeneracni-krem-na-nohy-s-hadim-olejem_z83/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">41105</span>
+      <span class="sales">📦 1,504 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/regeneracni-krem-na-nohy-s-hadim-olejem_z83/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Regenerační krém na nohy s hadím olejem</div>
+    <h2 class="product-title">Regenerační krém na nohy s hadím olejem</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Regenerační krém na nohy s hadím olejem</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 41105</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Regenerační krém na nohy s hadím olejem doporučujeme na péči o chodidla ve chvíli, kdy chcete rychle rozhodnout mezi regenerační a každodenní variantou a vědět, kdy dává větší smysl krém, náplast nebo koupel.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 5 (47x hodnoceno)</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Meta popis stránky: Co na suché paty a popraskaná chodidla | Regenerační krém na nohy</p>
-<br>
-<p style="margin:3px 0;font-size:13px">POZNÁMKA: Stránka vrátila velmi krátký obsah – readability extractor zachytil pouze úvodní větu. Níže je dostupný text z extrakce.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Regenerační krém na nohy s hadím olejem doporučujeme na péči o chodidla ve chvíli, kdy chcete rychle rozhodnout mezi regenerační a každodenní variantou a vědět, kdy dává větší smysl krém, náplast nebo koupel.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Produkt patří do hadí řady (Hadí řada) TianDe. Hadí olej je tradičně používán v péči o suchou, popraskanou a namáhanou pokožku chodidel a pat.</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Regenerační krém na nohy s hadím olejem</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 41105</p>
+<p style="margin:3px 0;font-size:12px">Regenerační krém na nohy s hadím olejem doporučujeme na péči o chodidla ve chvíli, kdy chcete rychle rozhodnout mezi regenerační a každodenní variantou a vědět, kdy dává větší smysl krém, náplast nebo koupel.</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 5 (47x hodnoceno)</p>
+<p style="margin:3px 0;font-size:12px">Meta popis stránky: Co na suché paty a popraskaná chodidla | Regenerační krém na nohy</p>
+<p style="margin:3px 0;font-size:12px">POZNÁMKA: Stránka vrátila velmi krátký obsah – readability extractor zachytil pouze úvodní větu. Níže je dostupný text z extrakce.</p>
+<p style="margin:3px 0;font-size:12px">Regenerační krém na nohy s hadím olejem doporučujeme na péči o chodidla ve chvíli, kdy chcete rychle rozhodnout mezi regenerační a každodenní variantou a vědět, kdy dává větší smysl krém, náplast nebo koupel.</p>
+<p style="margin:3px 0;font-size:12px">Produkt patří do hadí řady (Hadí řada) TianDe. Hadí olej je tradičně používán v péči o suchou, popraskanou a namáhanou pokožku chodidel a pat.</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -2748,44 +2564,33 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p15">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p15">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#15</span>
-      <code class="sku">61901</code>
-      <span class="sales">📦 1,459 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/denni-vlozky-s-fytomembranou-energie-bylin_z135/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">61901</span>
+      <span class="sales">📦 1,459 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/denni-vlozky-s-fytomembranou-energie-bylin_z135/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Denní vložky s fytomembránou Energie bylin</div>
+    <h2 class="product-title">Denní vložky s fytomembránou Energie bylin</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Denní vložky s fytomembránou „Energie bylin&quot;</h4>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 61901</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Meta popis stránky: Jak vybrat denní vložky s bylinami</p>
-<br>
-<p style="margin:3px 0;font-size:13px">POZNÁMKA: Stránka vrátila pouze recenzi zákaznice (readability extrahoval recenzní blok). Níže je dostupný text.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Recenze zákaznice: „bez nich už nedokážu vůbec fungovat, cítím se plná energie během chvilky používání, jsou příjemné na intimní partie, krásně voní, úplně mi vymizely záněty na které jsem velmi často trpěla, člověk se cítí pořád fresh, zvýšilo se mi při jejich používání libido, oblíbila si je i moje dcera, která je v období puberty a jiné vložky než ty od tiande nechce, prý ostatní nejsou tak komfortní, připadají jí ostatní velmi umělé, v těchto se cítí super a doporučuje je svým kamarádkám ve škole.&quot;</p>
-<p style="margin:3px 0;font-size:13px">Nevýhoda: jsou trošku dražší.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Produkt je součástí řady Energie bylin a jde o denní (slipové/intimní) vložky s fytomembránou. Příbuzný produkt: Denní menstruační vložky s fytomembránou „Energie bylin&quot; (SKU 61902).</p>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Denní vložky s fytomembránou „Energie bylin"</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 61901</p>
+<p style="margin:3px 0;font-size:12px">Meta popis stránky: Jak vybrat denní vložky s bylinami</p>
+<p style="margin:3px 0;font-size:12px">POZNÁMKA: Stránka vrátila pouze recenzi zákaznice (readability extrahoval recenzní blok). Níže je dostupný text.</p>
+<p style="margin:3px 0;font-size:12px">Recenze zákaznice: „bez nich už nedokážu vůbec fungovat, cítím se plná energie během chvilky používání, jsou příjemné na intimní partie, krásně voní, úplně mi vymizely záněty na které jsem velmi často trpěla, člověk se cítí pořád fresh, zvýšilo se mi při jejich používání libido, oblíbila si je i moje dcera, která je v období puberty a jiné vložky než ty od tiande nechce, prý ostatní nejsou tak komfortní, připadají jí ostatní velmi umělé, v těchto se cítí super a doporučuje je svým kamarádkám ve škole."</p>
+<p style="margin:3px 0;font-size:12px">Nevýhoda: jsou trošku dražší.</p>
+<p style="margin:3px 0;font-size:12px">Produkt je součástí řady Energie bylin a jde o denní (slipové/intimní) vložky s fytomembránou. Příbuzný produkt: Denní menstruační vložky s fytomembránou „Energie bylin" (SKU 61902).</p></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -2899,85 +2704,72 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p16">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p16">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#16</span>
-      <code class="sku">67007</code>
-      <span class="sales">📦 1,445 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/slipove-vlozky-se-stribrem-super-tenke_z5233/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">67007</span>
+      <span class="sales">📦 1,445 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/slipove-vlozky-se-stribrem-super-tenke_z5233/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Slipové vložky se stříbrem – super tenké</div>
+    <h2 class="product-title">Slipové vložky se stříbrem – super tenké</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Slipové vložky se stříbrem. super tenké</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 67007</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (108x hodnoceno)</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Slipové vložky se stříbrem. super tenké doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Cena: 176 Kč (8,80 Kč / 1 ks)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Jak vybrat slipové vložky se stříbrem: kdy doporučit Slipové vložky se stříbrem. super tenké</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Slipové vložky se stříbrem. super tenké dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
-<li style="margin-bottom:3px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
-<li style="margin-bottom:3px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">Slipové vložky se stříbrem. super tenké: řešení pro situace, kdy dává smysl právě slipové vložky se stříbrem.</li>
-<li style="margin-bottom:3px">slipové vložky s anionty Nefritová svěžest: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
-<li style="margin-bottom:3px">Ultra tenké slipové vložky Nebeská bavlna, 20 ks: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když je vhodnější Dámské bylinné slipové vložky s anionty Nefritová svěžest.</li>
-<li style="margin-bottom:3px">Když už dává větší smysl Ultra tenké slipové vložky Nebeská bavlna, 20 ks.</li>
-<li style="margin-bottom:3px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
-<li style="margin-bottom:3px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
-<li style="margin-bottom:3px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je Slipové vložky se stříbrem. super tenké nejlepší? Především na situace, které odpovídají dotazu slipové vložky se stříbrem.</li>
-<li style="margin-bottom:3px">Kdy zvolit Slipové vložky se stříbrem. super tenké a kdy Dámské bylinné slipové vložky s anionty Nefritová svěžest? Podle konkrétního profilu použití a očekávaného komfortu.</li>
-<li style="margin-bottom:3px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Parametry produktu</h4>
-<br>
-<li style="margin-bottom:3px">Kusy: 20 ks</li>
-<li style="margin-bottom:3px">Typ vložek: denní (intimky)</li>
-<li style="margin-bottom:3px">Produktová řada: Freshclick</li>
-<li style="margin-bottom:3px">Dárek pro koho: Mamince, Dceři, Babičce, Kamarádce, Kolegyni</li>
-<li style="margin-bottom:3px">Věkové kategorie: (12-17 let), (30-45 let), (46-60 let), (61+ let), (18-29 let)</li>
-<li style="margin-bottom:3px">Typ použití: Péče o tělo, Zdraví</li>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Slipové vložky se stříbrem. super tenké</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 67007</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (108x hodnoceno)</p>
+<p style="margin:3px 0;font-size:12px">Slipové vložky se stříbrem. super tenké doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
+<p style="margin:3px 0;font-size:12px">Cena: 176 Kč (8,80 Kč / 1 ks)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Jak vybrat slipové vložky se stříbrem: kdy doporučit Slipové vložky se stříbrem. super tenké</h3>
+<p style="margin:3px 0;font-size:12px">Slipové vložky se stříbrem. super tenké dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
+<li style="margin-bottom:2px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
+<li style="margin-bottom:2px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Slipové vložky se stříbrem. super tenké: řešení pro situace, kdy dává smysl právě slipové vložky se stříbrem.</li>
+<li style="margin-bottom:2px">slipové vložky s anionty Nefritová svěžest: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
+<li style="margin-bottom:2px">Ultra tenké slipové vložky Nebeská bavlna, 20 ks: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když je vhodnější Dámské bylinné slipové vložky s anionty Nefritová svěžest.</li>
+<li style="margin-bottom:2px">Když už dává větší smysl Ultra tenké slipové vložky Nebeská bavlna, 20 ks.</li>
+<li style="margin-bottom:2px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
+<li style="margin-bottom:2px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
+<li style="margin-bottom:2px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je Slipové vložky se stříbrem. super tenké nejlepší? Především na situace, které odpovídají dotazu slipové vložky se stříbrem.</li>
+<li style="margin-bottom:2px">Kdy zvolit Slipové vložky se stříbrem. super tenké a kdy Dámské bylinné slipové vložky s anionty Nefritová svěžest? Podle konkrétního profilu použití a očekávaného komfortu.</li>
+<li style="margin-bottom:2px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
+</ul>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Parametry produktu</h3>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Kusy: 20 ks</li>
+<li style="margin-bottom:2px">Typ vložek: denní (intimky)</li>
+<li style="margin-bottom:2px">Produktová řada: Freshclick</li>
+<li style="margin-bottom:2px">Dárek pro koho: Mamince, Dceři, Babičce, Kamarádce, Kolegyni</li>
+<li style="margin-bottom:2px">Věkové kategorie: (12-17 let), (30-45 let), (46-60 let), (61+ let), (18-29 let)</li>
+<li style="margin-bottom:2px">Typ použití: Péče o tělo, Zdraví</li>
+</ul></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -3107,85 +2899,72 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p17">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p17">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#17</span>
-      <code class="sku">61913</code>
-      <span class="sales">📦 1,286 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/damske-bylinne-menstruacni-vlozky-nefritova-svezest-nocni-super_z2111/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">61913</span>
+      <span class="sales">📦 1,286 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/damske-bylinne-menstruacni-vlozky-nefritova-svezest-nocni-super_z2111/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Dámské bylinné menstruační vložky Nefritová svěžest – noční super</div>
+    <h2 class="product-title">Dámské bylinné menstruační vložky Nefritová svěžest – noční super</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Dámské bylinné menstruační vložky Nefritová svěžest. noční super</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 61913</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.8 (68x hodnoceno)</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Dámské bylinné menstruační vložky Nefritová svěžest. noční super doporučujeme tehdy, když potřebujete jasně vybrat menstruační variantu spíš na noc, odpovídající míru jistoty a rychle poznat, kdy už je lepší sáhnout po blízké alternativě.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Cena: 206 Kč (20,60 Kč / 1 ks)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Vložky na noc při silnější menstruaci: kdy doporučit noční super variantu</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Dámské bylinné menstruační vložky Nefritová svěžest. noční super doporučujeme hlavně tehdy, když zákaznice nehledá obecně jen vložku, ale potřebuje rychle poznat, jestli je tahle varianta vhodná spíš na noc, jakou míru jistoty nabídne a kdy už je lepší sáhnout po blízké alternativě.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Při menstruaci, kdy potřebujete jistotu odpovídající této variantě.</li>
-<li style="margin-bottom:3px">Když je potřeba rychle odlišit denní a noční použití nebo lehčí a silnější volbu.</li>
-<li style="margin-bottom:3px">Když zákaznice vybírá podle konkrétní situace a ne jen podle názvu řady.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">menstruační vložky Nefritová svěžest. noční super: volba pro noc a konkrétní úroveň ochrany.</li>
-<li style="margin-bottom:3px">menstruační vložky Nefritová svěžest. denní super: dává větší smysl v sousední denní nebo noční situaci.</li>
-<li style="margin-bottom:3px">Denní vložky s extraktem aloe Nefritová svěžest: je vhodnější pro jemnější nebo nemenstruační použití.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když dává větší smysl Dámské bylinné menstruační vložky Nefritová svěžest. denní super.</li>
-<li style="margin-bottom:3px">Když už je vhodnější jemnější nebo běžnější varianta jako Denní vložky s extraktem aloe Nefritová svěžest.</li>
-<li style="margin-bottom:3px">Když nehledáte menstruační vložku, ale lehčí denní produkt.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">V úvodu hned vysvětlete, jestli jde o denní nebo noční variantu a pro jak silný režim se hodí.</li>
-<li style="margin-bottom:3px">Srovnávejte ji přímo s nejbližší alternativou v rámci stejné řady.</li>
-<li style="margin-bottom:3px">Vyjasněte hranici mezi běžným denním nošením a menstruačním použitím.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je Dámské bylinné menstruační vložky Nefritová svěžest. noční super nejlepší? Na situace, které odpovídají dotazu noční vložky pro silnější menstruaci.</li>
-<li style="margin-bottom:3px">Kdy zvolit Dámské bylinné menstruační vložky Nefritová svěžest. noční super a kdy Dámské bylinné menstruační vložky Nefritová svěžest. denní super? Podle toho, jestli řešíte noc a jakou míru jistoty potřebujete.</li>
-<li style="margin-bottom:3px">Kdy už je lepší Denní vložky s extraktem aloe Nefritová svěžest? Když hledáte jemnější nebo každodennější variantu.</li>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Parametry produktu</h4>
-<br>
-<li style="margin-bottom:3px">Kusy: 10 ks</li>
-<li style="margin-bottom:3px">Typ vložek: noční menstruační</li>
-<li style="margin-bottom:3px">Produktová řada: Nefritová svěžest</li>
-<li style="margin-bottom:3px">Dárek pro koho: Mamince, Dceři, Babičce, Kamarádce, Kolegyni</li>
-<li style="margin-bottom:3px">Věkové kategorie: (12-17 let), (30-45 let), (46-60 let), (61+ let), (18-29 let)</li>
-<li style="margin-bottom:3px">Typ použití: Péče o tělo, Zdraví</li>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Dámské bylinné menstruační vložky Nefritová svěžest. noční super</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 61913</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.8 (68x hodnoceno)</p>
+<p style="margin:3px 0;font-size:12px">Dámské bylinné menstruační vložky Nefritová svěžest. noční super doporučujeme tehdy, když potřebujete jasně vybrat menstruační variantu spíš na noc, odpovídající míru jistoty a rychle poznat, kdy už je lepší sáhnout po blízké alternativě.</p>
+<p style="margin:3px 0;font-size:12px">Cena: 206 Kč (20,60 Kč / 1 ks)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Vložky na noc při silnější menstruaci: kdy doporučit noční super variantu</h3>
+<p style="margin:3px 0;font-size:12px">Dámské bylinné menstruační vložky Nefritová svěžest. noční super doporučujeme hlavně tehdy, když zákaznice nehledá obecně jen vložku, ale potřebuje rychle poznat, jestli je tahle varianta vhodná spíš na noc, jakou míru jistoty nabídne a kdy už je lepší sáhnout po blízké alternativě.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Při menstruaci, kdy potřebujete jistotu odpovídající této variantě.</li>
+<li style="margin-bottom:2px">Když je potřeba rychle odlišit denní a noční použití nebo lehčí a silnější volbu.</li>
+<li style="margin-bottom:2px">Když zákaznice vybírá podle konkrétní situace a ne jen podle názvu řady.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">menstruační vložky Nefritová svěžest. noční super: volba pro noc a konkrétní úroveň ochrany.</li>
+<li style="margin-bottom:2px">menstruační vložky Nefritová svěžest. denní super: dává větší smysl v sousední denní nebo noční situaci.</li>
+<li style="margin-bottom:2px">Denní vložky s extraktem aloe Nefritová svěžest: je vhodnější pro jemnější nebo nemenstruační použití.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když dává větší smysl Dámské bylinné menstruační vložky Nefritová svěžest. denní super.</li>
+<li style="margin-bottom:2px">Když už je vhodnější jemnější nebo běžnější varianta jako Denní vložky s extraktem aloe Nefritová svěžest.</li>
+<li style="margin-bottom:2px">Když nehledáte menstruační vložku, ale lehčí denní produkt.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">V úvodu hned vysvětlete, jestli jde o denní nebo noční variantu a pro jak silný režim se hodí.</li>
+<li style="margin-bottom:2px">Srovnávejte ji přímo s nejbližší alternativou v rámci stejné řady.</li>
+<li style="margin-bottom:2px">Vyjasněte hranici mezi běžným denním nošením a menstruačním použitím.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je Dámské bylinné menstruační vložky Nefritová svěžest. noční super nejlepší? Na situace, které odpovídají dotazu noční vložky pro silnější menstruaci.</li>
+<li style="margin-bottom:2px">Kdy zvolit Dámské bylinné menstruační vložky Nefritová svěžest. noční super a kdy Dámské bylinné menstruační vložky Nefritová svěžest. denní super? Podle toho, jestli řešíte noc a jakou míru jistoty potřebujete.</li>
+<li style="margin-bottom:2px">Kdy už je lepší Denní vložky s extraktem aloe Nefritová svěžest? Když hledáte jemnější nebo každodennější variantu.</li>
+</ul>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Parametry produktu</h3>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Kusy: 10 ks</li>
+<li style="margin-bottom:2px">Typ vložek: noční menstruační</li>
+<li style="margin-bottom:2px">Produktová řada: Nefritová svěžest</li>
+<li style="margin-bottom:2px">Dárek pro koho: Mamince, Dceři, Babičce, Kamarádce, Kolegyni</li>
+<li style="margin-bottom:2px">Věkové kategorie: (12-17 let), (30-45 let), (46-60 let), (61+ let), (18-29 let)</li>
+<li style="margin-bottom:2px">Typ použití: Péče o tělo, Zdraví</li>
+</ul></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -3296,89 +3075,76 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p18">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p18">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#18</span>
-      <code class="sku">60145</code>
-      <span class="sales">📦 1,215 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/denni-hygienicka-vlozka-jemna-pece_z95/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">60145</span>
+      <span class="sales">📦 1,215 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/denni-hygienicka-vlozka-jemna-pece_z95/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Denní hygienická vložka Jemná péče</div>
+    <h2 class="product-title">Denní hygienická vložka Jemná péče</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Denní hygienická vložka „Jemná péče&quot;</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 60145</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (24x hodnoceno)</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Denní hygienická vložka „Jemná péče&quot; doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Cena: 69 Kč (dostupné v balení 1 ks, 5 ks, 10 ks)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Jak vybrat jednokusová bylinná vložka: kdy doporučit Denní hygienická vložka „Jemná péče&quot;</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Denní hygienická vložka „Jemná péče&quot; dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
-<li style="margin-bottom:3px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
-<li style="margin-bottom:3px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">Denní hygienická vložka „Jemná péče&quot;: řešení pro situace, kdy dává smysl právě jednokusová bylinná vložka.</li>
-<li style="margin-bottom:3px">Denní vložka Energie života: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
-<li style="margin-bottom:3px">slipové vložky Nefritová svěžest: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když je vhodnější Denní vložka Energie života.</li>
-<li style="margin-bottom:3px">Když už dává větší smysl Dámské bylinné slipové vložky Nefritová svěžest.</li>
-<li style="margin-bottom:3px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
-<li style="margin-bottom:3px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
-<li style="margin-bottom:3px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je Denní hygienická vložka „Jemná péče&quot; nejlepší? Především na situace, které odpovídají dotazu jednokusová bylinná vložka.</li>
-<li style="margin-bottom:3px">Kdy zvolit Denní hygienická vložka „Jemná péče&quot; a kdy Denní vložka Energie života? Podle konkrétního profilu použití a očekávaného komfortu.</li>
-<li style="margin-bottom:3px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Unikátní složení obsahuje</h4>
-<br>
-<li style="margin-bottom:3px">Alunit – přírodní krystal vulkanického původu. Má výrazné antibakteriální a hojivé vlastnosti. Zmírňuje podráždění pokožky.</li>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Parametry produktu</h4>
-<br>
-<li style="margin-bottom:3px">Kusy: 1 ks (dostupné i v baleních 5 ks a 10 ks)</li>
-<li style="margin-bottom:3px">Reálná hmotnost: 5 g</li>
-<li style="margin-bottom:3px">Typ vložek: speciální</li>
-<li style="margin-bottom:3px">Dárek pro koho: Mamince, Dceři, Babičce, Kamarádce, Kolegyni</li>
-<li style="margin-bottom:3px">Věkové kategorie: (30-45 let), (46-60 let), (61+ let), (18-29 let)</li>
-<li style="margin-bottom:3px">Typ použití: Péče o tělo, Zdraví</li>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Denní hygienická vložka „Jemná péče"</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 60145</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (24x hodnoceno)</p>
+<p style="margin:3px 0;font-size:12px">Denní hygienická vložka „Jemná péče" doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
+<p style="margin:3px 0;font-size:12px">Cena: 69 Kč (dostupné v balení 1 ks, 5 ks, 10 ks)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Jak vybrat jednokusová bylinná vložka: kdy doporučit Denní hygienická vložka „Jemná péče"</h3>
+<p style="margin:3px 0;font-size:12px">Denní hygienická vložka „Jemná péče" dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
+<li style="margin-bottom:2px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
+<li style="margin-bottom:2px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Denní hygienická vložka „Jemná péče": řešení pro situace, kdy dává smysl právě jednokusová bylinná vložka.</li>
+<li style="margin-bottom:2px">Denní vložka Energie života: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
+<li style="margin-bottom:2px">slipové vložky Nefritová svěžest: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když je vhodnější Denní vložka Energie života.</li>
+<li style="margin-bottom:2px">Když už dává větší smysl Dámské bylinné slipové vložky Nefritová svěžest.</li>
+<li style="margin-bottom:2px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
+<li style="margin-bottom:2px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
+<li style="margin-bottom:2px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je Denní hygienická vložka „Jemná péče" nejlepší? Především na situace, které odpovídají dotazu jednokusová bylinná vložka.</li>
+<li style="margin-bottom:2px">Kdy zvolit Denní hygienická vložka „Jemná péče" a kdy Denní vložka Energie života? Podle konkrétního profilu použití a očekávaného komfortu.</li>
+<li style="margin-bottom:2px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
+</ul>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Unikátní složení obsahuje</h3>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Alunit – přírodní krystal vulkanického původu. Má výrazné antibakteriální a hojivé vlastnosti. Zmírňuje podráždění pokožky.</li>
+</ul>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Parametry produktu</h3>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Kusy: 1 ks (dostupné i v baleních 5 ks a 10 ks)</li>
+<li style="margin-bottom:2px">Reálná hmotnost: 5 g</li>
+<li style="margin-bottom:2px">Typ vložek: speciální</li>
+<li style="margin-bottom:2px">Dárek pro koho: Mamince, Dceři, Babičce, Kamarádce, Kolegyni</li>
+<li style="margin-bottom:2px">Věkové kategorie: (30-45 let), (46-60 let), (61+ let), (18-29 let)</li>
+<li style="margin-bottom:2px">Typ použití: Péče o tělo, Zdraví</li>
+</ul></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -3496,85 +3262,72 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p19">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p19">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#19</span>
-      <code class="sku">61921</code>
-      <span class="sales">📦 1,195 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/damske-bylinne-slipove-vlozky-nefritova-svezest-super-tenke_z2226/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">61921</span>
+      <span class="sales">📦 1,195 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/damske-bylinne-slipove-vlozky-nefritova-svezest-super-tenke_z2226/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Dámské bylinné slipové vložky Nefritová svěžest – super tenké</div>
+    <h2 class="product-title">Dámské bylinné slipové vložky Nefritová svěžest – super tenké</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Dámské bylinné slipové vložky Nefritová svěžest - super tenké</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 61921</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (87x hodnoceno)</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Dámské bylinné slipové vložky Nefritová svěžest - super tenké doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Cena: 179 Kč (7,16 Kč / 1 ks)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Jak vybrat super tenké slipové vložky: kdy doporučit Dámské bylinné slipové vložky Nefritová svěžest - super tenké</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Dámské bylinné slipové vložky Nefritová svěžest - super tenké dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
-<li style="margin-bottom:3px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
-<li style="margin-bottom:3px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">slipové vložky Nefritová svěžest - super tenké: řešení pro situace, kdy dává smysl právě super tenké slipové vložky.</li>
-<li style="margin-bottom:3px">slipové vložky Nefritová svěžest: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
-<li style="margin-bottom:3px">Ultra tenké slipové vložky Nebeská bavlna, 20 ks: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když je vhodnější Dámské bylinné slipové vložky Nefritová svěžest.</li>
-<li style="margin-bottom:3px">Když už dává větší smysl Ultra tenké slipové vložky Nebeská bavlna, 20 ks.</li>
-<li style="margin-bottom:3px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
-<li style="margin-bottom:3px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
-<li style="margin-bottom:3px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je Dámské bylinné slipové vložky Nefritová svěžest - super tenké nejlepší? Především na situace, které odpovídají dotazu super tenké slipové vložky.</li>
-<li style="margin-bottom:3px">Kdy zvolit Dámské bylinné slipové vložky Nefritová svěžest - super tenké a kdy Dámské bylinné slipové vložky Nefritová svěžest? Podle konkrétního profilu použití a očekávaného komfortu.</li>
-<li style="margin-bottom:3px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Parametry produktu</h4>
-<br>
-<li style="margin-bottom:3px">Kusy: 25 ks</li>
-<li style="margin-bottom:3px">Typ vložek: denní (intimky)</li>
-<li style="margin-bottom:3px">Produktová řada: Nefritová svěžest</li>
-<li style="margin-bottom:3px">Dárek pro koho: Mamince, Dceři, Babičce, Kamarádce, Kolegyni</li>
-<li style="margin-bottom:3px">Věkové kategorie: (12-17 let), (30-45 let), (46-60 let), (61+ let), (18-29 let)</li>
-<li style="margin-bottom:3px">Typ použití: Péče o tělo, Zdraví</li>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Dámské bylinné slipové vložky Nefritová svěžest - super tenké</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 61921</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (87x hodnoceno)</p>
+<p style="margin:3px 0;font-size:12px">Dámské bylinné slipové vložky Nefritová svěžest - super tenké doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
+<p style="margin:3px 0;font-size:12px">Cena: 179 Kč (7,16 Kč / 1 ks)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Jak vybrat super tenké slipové vložky: kdy doporučit Dámské bylinné slipové vložky Nefritová svěžest - super tenké</h3>
+<p style="margin:3px 0;font-size:12px">Dámské bylinné slipové vložky Nefritová svěžest - super tenké dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
+<li style="margin-bottom:2px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
+<li style="margin-bottom:2px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">slipové vložky Nefritová svěžest - super tenké: řešení pro situace, kdy dává smysl právě super tenké slipové vložky.</li>
+<li style="margin-bottom:2px">slipové vložky Nefritová svěžest: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
+<li style="margin-bottom:2px">Ultra tenké slipové vložky Nebeská bavlna, 20 ks: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když je vhodnější Dámské bylinné slipové vložky Nefritová svěžest.</li>
+<li style="margin-bottom:2px">Když už dává větší smysl Ultra tenké slipové vložky Nebeská bavlna, 20 ks.</li>
+<li style="margin-bottom:2px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
+<li style="margin-bottom:2px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
+<li style="margin-bottom:2px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je Dámské bylinné slipové vložky Nefritová svěžest - super tenké nejlepší? Především na situace, které odpovídají dotazu super tenké slipové vložky.</li>
+<li style="margin-bottom:2px">Kdy zvolit Dámské bylinné slipové vložky Nefritová svěžest - super tenké a kdy Dámské bylinné slipové vložky Nefritová svěžest? Podle konkrétního profilu použití a očekávaného komfortu.</li>
+<li style="margin-bottom:2px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
+</ul>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Parametry produktu</h3>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Kusy: 25 ks</li>
+<li style="margin-bottom:2px">Typ vložek: denní (intimky)</li>
+<li style="margin-bottom:2px">Produktová řada: Nefritová svěžest</li>
+<li style="margin-bottom:2px">Dárek pro koho: Mamince, Dceři, Babičce, Kamarádce, Kolegyni</li>
+<li style="margin-bottom:2px">Věkové kategorie: (12-17 let), (30-45 let), (46-60 let), (61+ let), (18-29 let)</li>
+<li style="margin-bottom:2px">Typ použití: Péče o tělo, Zdraví</li>
+</ul></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -3685,85 +3438,72 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-
-<div class="card" id="p20">
-  <div class="card-head">
-    <div class="meta-row">
+</div><div class="product-card" id="p20">
+  <div class="product-header">
+    <div class="product-meta">
       <span class="rank">#20</span>
-      <code class="sku">61923</code>
-      <span class="sales">📦 1,134 ks / 30 dní</span>
-      <a href="https://www.kralovstvi-tiande.cz/ultra-tenke-slipove-vlozky-nebeska-bavlna-20-ks_z6965/" target="_blank" class="ext">↗ e-shop</a>
+      <span class="sku">61923</span>
+      <span class="sales">📦 1,134 ks/30d</span>
+      <a href="https://www.kralovstvi-tiande.cz/ultra-tenke-slipove-vlozky-nebeska-bavlna-20-ks_z6965/" target="_blank" class="shop-link">🔗 e-shop</a>
     </div>
-    <div class="prod-title">Ultra tenké slipové vložky Nebeská bavlna 20 ks</div>
+    <h2 class="product-title">Ultra tenké slipové vložky Nebeská bavlna 20 ks</h2>
   </div>
-  <div class="cols">
-    <div class="col col-before">
-      <div class="col-label before-label">PŘED – aktuální web</div>
-      <div class="col-body before-body"><h4 style="margin:10px 0 5px;color:#555">Ultra tenké slipové vložky Nebeská bavlna, 20 ks</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Kód produktu: 61923</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Hodnocení: 4.9 (66x hodnoceno)</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Ultra tenké slipové vložky Nebeská bavlna, 20 ks doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
-<br>
-<p style="margin:3px 0;font-size:13px">Cena: 164 Kč (8,20 Kč / 1 ks)</p>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Jak vybrat ultra tenké slipové vložky: kdy doporučit Ultra tenké slipové vložky Nebeská bavlna, 20 ks</h4>
-<br>
-<p style="margin:3px 0;font-size:13px">Ultra tenké slipové vložky Nebeská bavlna, 20 ks dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy dává největší smysl</h5>
-<br>
-<li style="margin-bottom:3px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
-<li style="margin-bottom:3px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
-<li style="margin-bottom:3px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak se rozhodnout mezi variantami</h5>
-<br>
-<li style="margin-bottom:3px">Ultra tenké slipové vložky Nebeská bavlna, 20 ks: řešení pro situace, kdy dává smysl právě ultra tenké slipové vložky.</li>
-<li style="margin-bottom:3px">slipové vložky Nefritová svěžest - super tenké: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
-<li style="margin-bottom:3px">Slipové vložky se stříbrem. super tenké: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Kdy zvolit jiný produkt</h5>
-<br>
-<li style="margin-bottom:3px">Když je vhodnější Dámské bylinné slipové vložky Nefritová svěžest - super tenké.</li>
-<li style="margin-bottom:3px">Když už dává větší smysl Slipové vložky se stříbrem. super tenké.</li>
-<li style="margin-bottom:3px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">Jak používat</h5>
-<br>
-<li style="margin-bottom:3px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
-<li style="margin-bottom:3px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
-<li style="margin-bottom:3px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
-<br>
-<h5 style="margin:8px 0 4px;color:#666">FAQ</h5>
-<br>
-<li style="margin-bottom:3px">Na co je Ultra tenké slipové vložky Nebeská bavlna, 20 ks nejlepší? Především na situace, které odpovídají dotazu ultra tenké slipové vložky.</li>
-<li style="margin-bottom:3px">Kdy zvolit Ultra tenké slipové vložky Nebeská bavlna, 20 ks a kdy Dámské bylinné slipové vložky Nefritová svěžest - super tenké? Podle konkrétního profilu použití a očekávaného komfortu.</li>
-<li style="margin-bottom:3px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
-<br>
-<h4 style="margin:10px 0 5px;color:#555">Parametry produktu</h4>
-<br>
-<li style="margin-bottom:3px">Kusy: 20 ks</li>
-<li style="margin-bottom:3px">Typ vložek: denní (intimky)</li>
-<li style="margin-bottom:3px">Produktová řada: Nefritová svěžest</li>
-<li style="margin-bottom:3px">Dárek pro koho: Mamince, Dceři, Babičce, Kamarádce, Kolegyni</li>
-<li style="margin-bottom:3px">Věkové kategorie: (12-17 let), (30-45 let), (46-60 let), (61+ let), (18-29 let)</li>
-<li style="margin-bottom:3px">Typ použití: Péče o tělo, Zdraví</li>
-<br></div>
+  <div class="comparison">
+    <div class="col before-col">
+      <div class="col-header"><span class="label-badge before-badge">PŘED</span><span class="col-sub">aktuální e-shop</span></div>
+      <div class="content"><h3 style="margin:10px 0 4px;font-size:13px;color:#555">Ultra tenké slipové vložky Nebeská bavlna, 20 ks</h3>
+<p style="margin:3px 0;font-size:12px">Kód produktu: 61923</p>
+<p style="margin:3px 0;font-size:12px">Hodnocení: 4.9 (66x hodnoceno)</p>
+<p style="margin:3px 0;font-size:12px">Ultra tenké slipové vložky Nebeská bavlna, 20 ks doporučujeme pro každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany, kdy zákaznice potřebuje rychle poznat rozdíl proti podobným variantám a vybrat tu správnou.</p>
+<p style="margin:3px 0;font-size:12px">Cena: 164 Kč (8,20 Kč / 1 ks)</p>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Jak vybrat ultra tenké slipové vložky: kdy doporučit Ultra tenké slipové vložky Nebeská bavlna, 20 ks</h3>
+<p style="margin:3px 0;font-size:12px">Ultra tenké slipové vložky Nebeská bavlna, 20 ks dává smysl ve chvíli, kdy zákaznice hledá každodenní pohodlí, lehkou jistotu nebo konkrétní profil denní ochrany a potřebuje rychle pochopit, proč zvolit právě tuto variantu místo podobných možností.</p>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy dává největší smysl</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na každodenní nošení, lehký výtok nebo pocit jistoty navíc, pokud to odpovídá této variantě.</li>
+<li style="margin-bottom:2px">Když chcete rychle vybrat správný profil podle tloušťky, diskrétnosti nebo intenzity.</li>
+<li style="margin-bottom:2px">Když zákaznice porovnává více podobných slipových nebo denních variant.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak se rozhodnout mezi variantami</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Ultra tenké slipové vložky Nebeská bavlna, 20 ks: řešení pro situace, kdy dává smysl právě ultra tenké slipové vložky.</li>
+<li style="margin-bottom:2px">slipové vložky Nefritová svěžest - super tenké: vhodnější tehdy, když zákaznice chce jiný profil nebo intenzitu.</li>
+<li style="margin-bottom:2px">Slipové vložky se stříbrem. super tenké: pomáhá vymezit, kdy už jde o jiný typ použití než běžný denní komfort.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Kdy zvolit jiný produkt</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Když je vhodnější Dámské bylinné slipové vložky Nefritová svěžest - super tenké.</li>
+<li style="margin-bottom:2px">Když už dává větší smysl Slipové vložky se stříbrem. super tenké.</li>
+<li style="margin-bottom:2px">Když je potřeba vyšší savost nebo úplně jiná kategorie produktu než denní/slipová varianta.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">Jak používat</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Začněte situací použití a teprve potom vysvětlujte benefity.</li>
+<li style="margin-bottom:2px">V horním bloku vždy rychle vyjasněte rozdíl proti nejbližší podobné variantě.</li>
+<li style="margin-bottom:2px">Pokud jde o intenzivnější nebo specifičtější variantu, řekněte to otevřeně hned v úvodu.</li>
+</ul>
+<h4 style="margin:8px 0 3px;font-size:12px;color:#666">FAQ</h4>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Na co je Ultra tenké slipové vložky Nebeská bavlna, 20 ks nejlepší? Především na situace, které odpovídají dotazu ultra tenké slipové vložky.</li>
+<li style="margin-bottom:2px">Kdy zvolit Ultra tenké slipové vložky Nebeská bavlna, 20 ks a kdy Dámské bylinné slipové vložky Nefritová svěžest - super tenké? Podle konkrétního profilu použití a očekávaného komfortu.</li>
+<li style="margin-bottom:2px">Je to správná volba pro každého? Ne, důležité je jasně říct i to, komu bude sedět jiná varianta víc.</li>
+</ul>
+<h3 style="margin:10px 0 4px;font-size:13px;color:#555">Parametry produktu</h3>
+<ul style="margin:4px 0 4px 16px">
+<li style="margin-bottom:2px">Kusy: 20 ks</li>
+<li style="margin-bottom:2px">Typ vložek: denní (intimky)</li>
+<li style="margin-bottom:2px">Produktová řada: Nefritová svěžest</li>
+<li style="margin-bottom:2px">Dárek pro koho: Mamince, Dceři, Babičce, Kamarádce, Kolegyni</li>
+<li style="margin-bottom:2px">Věkové kategorie: (12-17 let), (30-45 let), (46-60 let), (61+ let), (18-29 let)</li>
+<li style="margin-bottom:2px">Typ použití: Péče o tělo, Zdraví</li>
+</ul></div>
     </div>
     <div class="arrow">→</div>
-    <div class="col col-after">
-      <div class="col-label after-label">PO – GEO v2 · 10/10</div>
-      <div class="col-body after-body"><script type="application/ld+json">
+    <div class="col after-col">
+      <div class="col-header"><span class="label-badge after-badge">PO — GEO v2</span><span class="col-sub">ověřená fakta · FAQ · schema</span></div>
+      <div class="content geo-content"><script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -3880,13 +3620,8 @@ body{font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;backgr
   </details>
 </section>
 </div>
-      <div class="geo-tags">
-        <span>✓ Answer-first</span><span>✓ Ověřená fakta</span><span>✓ Rozlišitelnost</span>
-        <span>✓ FAQ bloky</span><span>✓ JSON-LD schema</span><span>✓ Lidský flow</span>
-      </div>
     </div>
   </div>
-</div>
-</main>
+</div></main>
 </body>
 </html>
